@@ -1,0 +1,63 @@
+:root {
+    --primary-color: #1D63ED;
+    --overlay-color: #0444a4ef;
+    --menu-speed: 0.75s;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+  .logo-docker{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-left: 50%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+  body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+  
+    background-size: 100vw 50vh;
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-position-y: 100%;
+    
+  }
+  .container {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 5.3rem;
+  }
+  .showcase {
+    color: black;
+    height: 100%;
+    margin-top: 40px;
+  }
+  
+  .showcase .showcase-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  h1{
+    font-weight: 100;
+    text-align: center;
+  }
+  h2{
+    margin-top: 40px;
+    font-weight: 300;
+    font-size: 2.1rem;
+  }
+  p{
+    color: black;
+    font-size: 1.3rem;
+  }

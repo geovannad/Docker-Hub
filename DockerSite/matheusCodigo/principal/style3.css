@@ -1,0 +1,130 @@
+:root {
+    --primary-color: #1D63ED;
+    --overlay-color: #0444a4ef;
+    --menu-speed: 0.75s;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  .logo-docker{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-left: 50%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+  body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-position-y: 100%;
+    
+  }
+  .container {
+    width: 1200px;
+    overflow: hidden;
+    padding: 0 5.3rem;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .showcase {
+    height: 100%;
+    margin-top: 40px;
+    
+  }
+  
+  .showcase .showcase-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    
+  }
+  
+  h1{
+    font-weight: 100;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  h2{
+    margin-top: 40px;
+    font-weight: 300;
+  }
+  
+  p{
+    color: black;
+    font-size: 1.1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .comandos code{
+    width: 600px;
+    
+  }
+  .comandos button{
+    width: 100px;
+    border:none;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  .cod-elem{
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    background-color: #D9D9D9;
+    padding: 15px;
+    border-radius: 0.8rem;
+  }
+
+  .comandos{
+    display: flex;
+    padding: 10px 0 0 0;
+  }
+
+  .resultados{
+    display: flex;
+    border: solid var(--overlay-color);
+    border-radius: 5px;
+    margin: 30px auto;
+    width: 950px;
+    height: 100%;
+    justify-content: center;  
+    max-width: 100%;
+}
+
+  #comando{
+    height: 240px;
+
+  }
+  #host{
+    height: 410px;
+    
+  }
+  #hub{
+    height: 240px;
+    
+  }
+
+  .caixas{
+    width: 260px;
+    border: solid var(--overlay-color);
+    margin: 25px 10px;
+    border-radius: 1rem;
+    text-align: center; 
+}   
+.linha{
+    background-color: var(--overlay-color);
+    height: 2px;
+    width: 100%;
+}
