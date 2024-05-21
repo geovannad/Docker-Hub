@@ -53,6 +53,7 @@
     font-weight: 100;
     text-align: center;
     max-width: 100%;
+    margin-bottom: 1%;
   }
   
   h2{
@@ -140,4 +141,14 @@
     background-color: var(--overlay-color);
     height: 2px;
     width: 100%;
+  }
+
+  #gabarito{
+    margin-top: 2%;
+    background-color: rgb(210, 203, 203);
+    text-align: center;
+    padding: 10px 10px;
+    width: 12%;
+    border-radius: 5px 5px;
+    color: #1D63ED;
   }
