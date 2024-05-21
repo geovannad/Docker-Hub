@@ -61,7 +61,7 @@ body {
   font-size: 1.3rem;
 }
 
-.btn {
+.btn1 {
   display: inline-block;
   border: none;
   padding: 15px;
@@ -72,6 +72,9 @@ body {
   margin-top: 1rem;
   transition: opacity 1s ease-in-out;
   text-decoration: none;
+  position: relative;
+  z-index: 10000;
+
 }
 
 .btn:hover {

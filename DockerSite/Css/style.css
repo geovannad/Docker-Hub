@@ -159,3 +159,19 @@
     justify-content: center;
     padding-top: 10px;
 }
+
+
+.btn {
+  display: inline-block;
+  border: none;
+  padding: 15px;
+  background: linear-gradient(to left, var(--primary-color), var(--overlay-color))  ;
+  border-radius: 10px;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  transition: opacity 1s ease-in-out;
+  text-decoration: none;
+  margin-left: 85%;
+  margin-bottom: 20px;
+}
