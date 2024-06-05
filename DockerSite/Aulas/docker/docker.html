@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="style_docker.css" />
     <link rel="stylesheet" href="../../Css/style.css" />
-    <title>Hamburger Menu Overlay</title>
+    <title>Docker</title>
   </head>
   <body>
     <div class="menu-wrap">
@@ -20,47 +20,104 @@
         <div>
           <div>
             <ul>
-              <li class="grupos" style="font-size: 2rem;">Aulas:</li>
-              <li class="opcoes"><a  href="../docker/docker.html"> 1 - Conceito de Docker</a></li>
-              <li class="opcoes"><a  href="../imagem/imagem.html"> 2 - Como criar uma imagem?</a></li>
-              <li class="opcoes"><a  href="../container/container.html"> 3 - Como criar um container?</a></li>
-              <li class="opcoes"> <a   href="#"> 4 - Como subir pro Docker Hub?</a></li>
-              <li class="opcoes"><a  href="#"> 5 - O que é Docker File?</a></li>
-              <li class="opcoes"><a  href="#"> 6 - O que é Docker Compose</a></li>
-              <li class="grupos" style="font-size: 2rem;">Exercícios:</li>
-              <li class="opcoes"><a  href="../../Atividades/atividade1/at_1.html">Atividades</a></li>
-              <li class="opcoes"><a  href="#">Desafio Final</a></li>
+              <li class="grupos" style="font-size: 2rem">Aulas:</li>
+              <li class="opcoes">
+                <a href="../docker/docker.html"> 1 - Conceito de Docker</a>
+              </li>
+              <li class="opcoes">
+                <a href="../container/container.html">
+                  2 - Conceito de contêiner</a
+                >
+              </li>
+              <li class="opcoes">
+                <a href="../imagem/imagem.html"> 3 - Conceito de imagem</a>
+              </li>
+
+              <li class="opcoes">
+                <a href="../comandos/comandos.html">
+                  4 - Executando contêiner e imagem</a
+                >
+              </li>
+              <li class="opcoes">
+                <a href="../portas/portas.html">
+                  5 - Funcionamento das Portas no Docker</a
+                >
+              </li>
+              <li class="opcoes">
+                <a href="../docker hub/hub.html">
+                  6 - Conceito de Docker Hub?</a
+                >
+              </li>
+              <li class="opcoes">
+                <a href="../dockerFIle/fileDocker.html">
+                  7 - Conceito de Docker File</a
+                >
+              </li>
+              <li class="opcoes">
+                <a href="../docker compose/compose.html">
+                  8 - Conceito de Docker Compose</a
+                >
+              </li>
+              <li class="grupos" style="font-size: 2rem">Exercícios:</li>
+              <li class="opcoes">
+                <a href="../../Atividades/telaInicial/escolha.html"
+                  >Atividades</a
+                >
+              </li>
+              <li class="opcoes">
+                <a href="../../Atividades/desafioFinal/desafioFinal.html"
+                  >Desafio Final</a
+                >
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <a class="logo-docker" href="#"><img src="../../Assets/docker-logo.png" alt="logo docker"></a>
 
+    <div class="logo-div">
+      <a class="logo-docker" href="#"
+        ><img src="../..//Assets/docker-logo.png" alt="logo docker"
+      /></a>
+    </div>
+    <h1>Conceito de Docker ?</h1>
     <header class="showcase">
-        <div class="container showcase-inner" style="color:#1D63ED;">
-          <h1 >Conceito de Docker e Docker Hub</h1>
-          <h2>
-            Subtitulo
-          </h2>
-          <p>Lorem ipsum bibendum id ornare feugiat diam gravida convallis nam curae iaculis lobortis, curabitur ac vitae pharetra metus sapien convallis ut dictum quam pretium, magna cubilia himenaeos cubilia et a senectus etiam augue ligula ullamcorper. venenatis vulputate lorem adipiscing ultricies mollis consectetur nam arcu torquent volutpat risus cras non consequat eleifend mollis, elit vulputate volutpat hac euismod suscipit leo eleifend est hendrerit tempor vestibulum ipsum magna.</p>
+      <div class="container showcase-inner" style="color: #1d63ed">
+        <h2>Conceito e definição</h2>
+        <p>
+          O Docker é uma plataforma de código aberto que simplifica a criação e
+          administração de ambientes isolados, conhecidos como contêineres.
+          Esses contêineres encapsulam uma aplicação junto com suas
+          dependências, permitindo que sejam executados de forma consistente em
+          qualquer ambiente que possua o Docker instalado. Essencialmente, o
+          Docker é uma ferramenta que facilita a implantação e execução de
+          aplicativos ao empacotá-los com tudo o que precisam para funcionar,
+          tornando-os portáteis e consistentes em diferentes sistemas.
+        </p>
 
-
-          <h2>
-            Subtitulo
-          </h2>
-          <p>Lorem ipsum bibendum id ornare feugiat diam gravida convallis nam curae iaculis lobortis, curabitur ac vitae pharetra metus sapien convallis ut dictum quam pretium, magna cubilia himenaeos cubilia et a senectus etiam augue ligula ullamcorper. venenatis vulputate lorem adipiscing ultricies mollis consectetur nam arcu torquent volutpat risus cras non consequat eleifend mollis, elit vulputate volutpat hac euismod suscipit leo eleifend est hendrerit tempor vestibulum ipsum magna.</p>
-
-          <h2>
-            Subtitulo
-          </h2>
-          <p>Lorem ipsum bibendum id ornare feugiat diam gravida convallis nam curae iaculis lobortis, curabitur ac vitae pharetra metus sapien convallis ut dictum quam pretium, magna cubilia himenaeos cubilia et a senectus etiam augue ligula ullamcorper. venenatis vulputate lorem adipiscing ultricies mollis consectetur nam arcu torquent volutpat risus cras non consequat eleifend mollis, elit vulputate volutpat hac euismod suscipit leo eleifend est hendrerit tempor vestibulum ipsum magna.</p>          
-
-
-          
-        </div>
-      </header>
-      <a href="../imagem/imagem.html" class="btn">Avançar</a>
-
+        <h2>Exemplo</h2>
+        <p>
+          Imagine que você está construindo uma casa (sua aplicação) e precisa
+          de ferramentas (dependências) específicas, como martelo, pregos e
+          tinta. Em vez de ter que transportar todas essas ferramentas toda vez
+          que for construir uma casa em diferentes locais, você pode colocá-las
+          em uma caixa (contêiner) etiquetada como "Construção de Casa". Agora,
+          sempre que precisar construir uma casa em qualquer lugar, basta levar
+          essa caixa consigo, e todas as ferramentas necessárias estarão prontas
+          para uso, sem afetar as ferramentas que você usa para outros projetos,
+          como jardim ou marcenaria.
+        </p>
+        <p>
+          Da mesma forma, o Docker permite que você empacote sua aplicação com
+          todas as suas dependências em um contêiner, tornando-a facilmente
+          transportável e executável em qualquer ambiente compatível com Docker,
+          sem afetar outros aplicativos ou configurações no sistema hospedeiro.
+          Isso simplifica muito o processo de desenvolvimento, implantação e
+          escalonamento de aplicativos, garantindo consistência e eficiência em
+          todo o ciclo de vida do software.
+        </p>
+      </div>
+    </header>
+    <a href="../container/container.html" class="btn">Avançar</a>
   </body>
 </html>

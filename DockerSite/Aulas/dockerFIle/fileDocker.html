@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style_dockerFile.css" />
+    <link rel="stylesheet" href="../../Css/style.css" />
+    <title>Docker File</title>
+  </head>
+  <body>
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler" />
+      <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li class="grupos" style="font-size: 2rem">Aulas:</li>
+              <li class="opcoes">
+                <a href="../docker/docker.html"> 1 - Conceito de Docker</a>
+              </li>
+              <li class="opcoes">
+                <a href="../container/container.html"> 2 - Conceito de contêiner</a>
+              </li>
+              <li class="opcoes">
+                <a href="../imagem/imagem.html">
+                  3 - Conceito de imagem</a
+                >
+              </li>
+              
+              <li class="opcoes">
+                <a href="../comandos/comandos.html">
+                  4 - Executando contêiner e imagem</a
+                >
+              </li>
+              <li class="opcoes">
+                <a href="../portas/portas.html"> 5 - Funcionamento das Portas no Docker</a>
+              </li>
+              <li class="opcoes"><a href="../docker hub/hub.html"> 6 - Conceito de Docker Hub?</a></li>
+              <li class="opcoes">
+                <a href="../dockerFIle/fileDocker.html"> 7 - Conceito de Docker File</a>
+              </li>
+              <li class="opcoes">
+                <a href="../docker compose/compose.html"> 8 - Conceito de Docker Compose</a>
+              </li>
+              <li class="grupos" style="font-size: 2rem">Exercícios:</li>
+              <li class="opcoes">
+                <a href="../../Atividades/telaInicial/escolha.html">Atividades</a>
+              </li>
+              <li class="opcoes"><a href="../../Atividades/desafioFinal/desafioFinal.html">Desafio Final</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo-div" >
+      <a class="logo-docker" href="#"><img src="../..//Assets/docker-logo.png" alt="logo docker"></a>
+  </div>
+    <h1>O que é Docker File ?</h1>
+    <header class="showcase">
+        <div class="container showcase-inner" style="color:#1D63ED;">
+          
+          <h2>
+            Conceito e definição
+          </h2>
+          <p >Um Dockerfile é um arquivo de texto que contém uma série de instruções que o Docker usa para construir automaticamente uma imagem Docker. Essas instruções incluem etapas como escolher a imagem base(obrigatoriamente), copiar arquivos para dentro da imagem, instalar dependências, configurar variáveis de ambiente e definir comandos a serem executados quando o contêiner for iniciado. 
+<br><br>
+            Em resumo, um Dockerfile é como um conjunto de instruções passo a passo que dizem ao Docker como construir uma imagem Docker específica. Ele permite que você defina e automatize todo o processo de criação de uma imagem, garantindo que o ambiente dentro do contêiner seja configurado corretamente para o seu aplicativo ou serviço. 
+            
+            
+          </p>
+          <h2>Exemplo</h2>
+          <p>Imagine que você tem uma planta baixa de uma casa, que é como uma imagem Docker. A planta baixa contém a estrutura básica da casa, mas não inclui os móveis ou decorações específicas. Por exemplo, temos os cômodos da casa definidos, como sala, cozinha, quartos e banheiros, mas não temos os móveis dentro desses cômodos. 
+            <br>
+            Agora, o Dockerfile seria como um plano detalhado para decorar essa casa com móveis específicos. Ele descreve as etapas necessárias para adicionar os móveis e fazer com que a casa fique pronta para ser habitada. 
+            
+          </p>
+          <p>Para você criar o arquivo que irá executar esse conjunto de instruções não é preciso de uma extensão no arquivo, basta colocar o nome desse arquivo com "dockerfile"</p>
+        
+
+        <div class="resultados">
+            <p><strong>FROM</strong> node <br><strong>WORKDIR</strong> /usr/src/app <br><strong>COPY</strong> package.json . <br><strong>RUN</strong> npm i <br><strong>Copy</strong> . <br><strong>EXPOSE</strong> 3000 <br>
+                <strong>CMD</strong> ["node","index.js"]	
+                </p>
+        </div>
+
+        <h2>Explicação dos comandos</h2>
+        
+            <p>
+                <strong>FROM node </strong> 				- define a imagem base que será utilizada <br>
+                <strong>WORKDIR /usr/src/app</strong>	- cria o diretório dessa imagem no contêiner e entra, ou apenas entra se esse diretório já existir <br>
+                <strong>COPY package.json .</strong>		- copia o arquivo local (package.json) para a pasta do contêiner/app -*O . se refere ao diretório onde você está, como entramos no /app se refere a ele <br>
+                <strong>RUN npm i				</strong>- após copiar o arquivo roda o npm install <br>
+                <strong>COPY . .</strong>				- copia todos os arquivos da raiz do projeto (onde está o dockerfile) para o /app * o primeiro . se refere a pasta raiz do projeto localmente e o segundo . se refere a pasta do contêiner/app <br>
+                <strong>EXPOSE 3000	</strong>			- define a porta da aplicação <br>
+                <strong>CMD ["node","index.js"]</strong>	- o comando que dá o start na aplicação
+                </p>
+        
+        <h2>A diferença entre os comandos run, cmd e entrypoint</h2>
+        
+        <p>
+            <strong>RUN</strong>: A instrução "RUN" é usada para executar comandos durante o processo de construção da imagem Docker. Quando você cria uma imagem Docker usando um Dockerfile, cada instrução "RUN" é executada em uma nova camada intermediária da imagem. Esses comandos são executados no ambiente de construção da imagem e podem ser usados para instalar pacotes, configurar o ambiente, baixar arquivos, entre outras tarefas. 
+            <br>
+
+<strong>CMD</strong>: A instrução "CMD" é usada para definir o comando padrão a ser executado quando um contêiner baseado na imagem Docker é iniciado. Você só pod>e ter uma instrução "CMD" em um Dockerfile e ela substituirá qualquer instrução "CMD" anterior se houver. O comando definido pela instrução "CMD" pode ser substituído quando você inicia um contêiner, passando um novo comando como argumento. 
+<br>
+<strong>ENTRYPOINT</strong>: configura o comando a ser executado quando o contêiner é iniciado, similar à funcionalidade do CMD. 
+<br>
+Resumindo, "RUN" é usado durante a construção da imagem para executar comandos e modificar a camada intermediária da imagem, enquanto "CMD" é usado para definir o comando padrão a ser executado quando o contêiner é iniciado assim como o “ENTRYPOINT”. 
+</p>
+
+<h2>Comandos</h2>
+
+<div class="comandos" >
+    <code class="cod-elem">
+        docker build -t seu_usuario/nginx:1.0 . 
+    </code>
+
+    
+  </div>
+  <br>
+  <p><strong>docker build:</strong> Este é o comando principal utilizado para construir imagens Docker a partir de um Dockerfile e um contexto de construção. Ele é usado para automatizar o processo de construção de imagens. 
+    <br><br>
+        <strong>-t seu_usuario/nginx:1.0:</strong> Esta é uma opção do comando docker build. O -t permite que você especifique um nome e uma tag para a imagem que está sendo construída. Neste caso, seu_usuario/nginx é o nome da imagem e 1.0 é a tag de versão. Isso permite que você identifique e gerencie facilmente diferentes versões da sua imagem. 
+        <br>
+         Este é o contexto de construção. O ponto (.) indica que o Docker deve procurar pelo Dockerfile e quaisquer outros arquivos necessários no diretório atual. O contexto de construção é o conjunto de arquivos e diretórios que são enviados para o Docker daemon para a construção da imagem. 
+        </p>    
+</div>
+
+
+        </div>
+
+      </header>
+      <br>
+      <a href="../docker compose/compose.html" class="btn">Avançar</a>
+      <br><br><br>
+
+      
+
+      
+  </body>
+</html>

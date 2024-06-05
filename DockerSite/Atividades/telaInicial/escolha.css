@@ -1,0 +1,266 @@
+:root {
+  --primary-color: #1d63ed;
+  --overlay-color: #0444a4ef;
+  --menu-speed: 0.75s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logo-docker {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-left: 50%;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position-y: 100%;
+}
+.container {
+  overflow: hidden;
+  padding: 0 5.3rem;
+  margin: 0 auto;
+}
+.showcase {
+  height: 100%;
+  margin-top: 40px;
+}
+
+.showcase .showcase-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+h2 {
+  margin-top: 40px;
+  font-weight: 300;
+}
+
+p {
+  color: black;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.comandos code {
+  width: 600px;
+}
+.comandos button {
+  width: 100px;
+  border: none;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.cod-elem {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  background-color: #d9d9d9;
+  padding: 15px;
+  border-radius: 0.8rem;
+}
+
+.comandos {
+  display: flex;
+  padding: 10px 0 0 0;
+}
+
+.resultados {
+  display: flex;
+  border: solid var(--overlay-color);
+  border-radius: 5px;
+  margin: 30px auto;
+  width: 950px;
+  height: 100%;
+  justify-content: center;
+  max-width: 100%;
+}
+
+#comando {
+  height: 240px;
+}
+#host {
+  height: 410px;
+}
+#hub {
+  height: 240px;
+}
+
+.caixas {
+  width: 260px;
+  border: solid var(--overlay-color);
+  margin: 25px 10px;
+  border-radius: 1rem;
+  text-align: center;
+}
+.linha {
+  background-color: var(--overlay-color);
+  height: 2px;
+  width: 100%;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.escolhas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  margin-top: 100px ;
+  z-index: 10000;
+}
+
+.caixa {
+  display: flex;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  width: 15vw;
+  height: 15vh;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+h1 {
+  font-weight: 100;
+  text-align: center;
+  max-width: 100%;
+  margin-bottom: 1%;
+  color: #1d63ed;
+}
+
+.caixa p {
+  margin: 0;
+  font-size: 16px;
+}
+.caixa:hover {
+  display: flex;
+  background-color: #1d62ed80;
+  transform: scale(1.1);
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  width: 15vw;
+  height:  15vh;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+body {
+  font-family: Lato, sans-serif;
+}
+
+footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0px;
+}
+footer div {
+  background-color: var(--primary-color);
+  margin: -5px 0px 0px 0px;
+  padding: 0px;
+  color: #fff;
+  text-align: center;
+}
+svg {
+  width: 100%;
+}
+
+.topball {
+  animation: ball 1.5s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 0.3s;
+  cursor: pointer;
+}
+
+.wave {
+  animation: wave 3s linear;
+  animation-iteration-count: infinite;
+  fill: var(--primary-color);
+}
+.drop {
+  fill: transparent;
+  animation: drop 5s ease infinite normal;
+  stroke: var(--primary-color);
+  stroke-width: 0.5;
+  opacity: 0.6;
+  transform: translateY(80%);
+}
+.drop1 {
+  transform-origin: 20px 3px;
+}
+.drop2 {
+  animation-delay: 3s;
+  animation-duration: 3s;
+  transform-origin: 25px 3px;
+}
+.drop3 {
+  animation-delay: -2s;
+  animation-duration: 3.4s;
+  transform-origin: 16px 3px;
+}
+.gooeff {
+  filter: url(#goo);
+}
+#wave2 {
+  animation-duration: 5s;
+  animation-direction: reverse;
+  opacity: 0.6;
+}
+#wave3 {
+  animation-duration: 7s;
+  opacity: 0.3;
+}
+@keyframes drop {
+  0% {
+    transform: translateY(80%);
+    opacity: 0.6;
+  }
+  80% {
+    transform: translateY(80%);
+    opacity: 0.6;
+  }
+  90% {
+    transform: translateY(10%);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0%) scale(1.5);
+    stroke-width: 0.2;
+    opacity: 0;
+  }
+}
+@keyframes wave {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes ball {
+  to {
+    transform: translateY(20%);
+  }
+}

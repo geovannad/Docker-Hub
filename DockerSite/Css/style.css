@@ -141,31 +141,48 @@
   transition: color 0.4s ease;
 }
 .opcoes:hover {
-  font-size: 1.5rem ;
+  font-size: 1.5rem;
 }
-.opcoes{
-    font-size: 1.2rem;
-    
+.opcoes {
+  font-size: 1.2rem;
 }
-.logo-docker{
-    display: flex;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
+.logo-docker {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin: 0px;
+  justify-content: center;
+  
 }
-.menu-wrap{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
+h1 {
+  font-weight: 100;
+  text-align: center;
+  max-width: 100%;
+  margin-bottom: 1%;
+  margin-top: 20px;
+  color: #1d63ed;
 }
-
+.logo-div{
+  display: flex;
+  justify-content: center;
+  padding: 20px ;
+}
+.menu-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
 
 .btn {
   display: inline-block;
   border: none;
   padding: 15px;
-  background: linear-gradient(to left, var(--primary-color), var(--overlay-color))  ;
+  background: linear-gradient(
+    to left,
+    var(--primary-color),
+    var(--overlay-color)
+  );
   border-radius: 10px;
   color: #fff;
   padding: 0.75rem 1.5rem;
@@ -173,5 +190,5 @@
   transition: opacity 1s ease-in-out;
   text-decoration: none;
   margin-left: 85%;
-  margin-bottom: 20px;
+  margin-bottom: 20px;
 }

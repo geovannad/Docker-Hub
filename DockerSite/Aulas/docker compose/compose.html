@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style_compose.css" />
+    <link rel="stylesheet" href="../../Css/style.css" />
+    <title>Docker Compose</title>
+  </head>
+  <body>
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler" />
+      <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li class="grupos" style="font-size: 2rem">Aulas:</li>
+              <li class="opcoes">
+                <a href="../docker/docker.html"> 1 - Conceito de Docker</a>
+              </li>
+              <li class="opcoes">
+                <a href="../container/container.html"> 2 - Conceito de contêiner</a>
+              </li>
+              <li class="opcoes">
+                <a href="../imagem/imagem.html">
+                  3 - Conceito de imagem</a
+                >
+              </li>
+              
+              <li class="opcoes">
+                <a href="../comandos/comandos.html">
+                  4 - Executando contêiner e imagem</a
+                >
+              </li>
+              <li class="opcoes">
+                <a href="../portas/portas.html"> 5 - Funcionamento das Portas no Docker</a>
+              </li>
+              <li class="opcoes"><a href="../docker hub/hub.html"> 6 - Conceito de Docker Hub?</a></li>
+              <li class="opcoes">
+                <a href="../dockerFIle/fileDocker.html"> 7 - Conceito de Docker File</a>
+              </li>
+              <li class="opcoes">
+                <a href="../docker compose/compose.html"> 8 - Conceito de Docker Compose</a>
+              </li>
+              <li class="grupos" style="font-size: 2rem">Exercícios:</li>
+              <li class="opcoes">
+                <a href="../../Atividades/telaInicial/escolha.html">Atividades</a>
+              </li>
+              <li class="opcoes"><a href="../../Atividades/desafioFinal/desafioFinal.html">Desafio Final</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="logo-div" >
+      <a class="logo-docker" href="#"><img src="../..//Assets/docker-logo.png" alt="logo docker"></a>
+  </div>
+  <h2>
+    Conceito e definição
+  </h2>
+  <h1>Conceito de Docker Compose ?</h1>
+    <header class="showcase">
+        <div class="container showcase-inner" style="color:#1D63ED;">
+          <p >Docker Compose é uma ferramenta que facilita a definição e a execução de aplicações multi-container no Docker. Com Docker Compose, você pode usar um arquivo YAML para configurar os serviços da sua aplicação. Esse arquivo, chamado docker-compose.yml, permite definir os contêineres, redes, volumes e outras configurações necessárias para sua aplicação funcionar. 
+          </p>
+
+          <h2>Conceitos Principais do Docker Compose </h2>
+        
+          <h3>Serviços (Services): </h3>
+          <p>
+            - Um serviço em Docker Compose é uma definição de um contêiner Docker. Cada serviço representa um contêiner que será gerenciado pelo Docker Compose. Por exemplo, você pode ter serviços separados para um banco de dados, um servidor web, um serviço de cache, etc. 
+            </p>
+
+          <h3>Volumes: </h3>
+          <p>- Volumes são usados para persistir dados entre reinicializações dos contêineres. Com volumes, os dados gerados e usados pelos contêineres podem ser armazenados de maneira persistente fora do ciclo de vida dos próprios contêineres. </p>
+
+          <h3>Redes: </h3>
+          <p>- Docker Compose permite definir redes personalizadas para permitir que os serviços se comuniquem entre si de forma isolada e segura. Por padrão, Docker Compose cria uma rede isolada para cada projeto, mas você pode configurar isso conforme suas necessidades. </p>
+
+          <h3>Builds: </h3>
+          <p>- Você pode especificar como os contêineres devem ser construídos diretamente no docker-compose.yml. Isso pode incluir a especificação de um Dockerfile, contexto de build e outras opções de construção. </p>
+
+          <h2>Exemplo de construção</h2>
+          
+        
+
+            <div class="resultados">
+                <p><strong>version: </strong>'3' </p>
+                <p><strong>services: </strong></p>
+                <p style="text-indent: 2ch;"><strong>web:</strong></p>
+                <p style="text-indent: 4ch;"><strong>image: </strong>nginx:latest</p>
+                <p style="text-indent: 4ch;"><strong>ports:</strong></p>
+                <p style="text-indent: 6ch;">- "80:80"</p>
+                <p style="text-indent: 2ch;"><strong>database:</strong></p>
+                <p style="text-indent: 4ch;"><strong>image: </strong>postgres:latest </p>
+                <p style="text-indent: 4ch;"><strong>environment: </strong></p>
+                <p style="text-indent: 6ch;"><strong>POSTGRES_PASSWORD: </strong>example </p>
+            </div><br>
+    
+            <p>Nesse exemplo, definimos dois serviços: web e database. O serviço web usa a imagem nginx:latest e mapeia a porta 80 do contêiner para a porta 80 do host. O serviço database usa a imagem postgres:latest e define uma variável de ambiente POSTGRES_PASSWORD. </p>
+
+      
+        
+
+        <h2>Comandos Básicos do Docker Compose </h2>
+        
+        <h3>docker-compose up: </h3>
+        <p>- Inicializa e executa todos os serviços definidos no arquivo docker-compose.yml. Se os contêineres já existirem, eles serão reiniciados, caso contrário, serão criados. </p>
+
+        <h3>docker-compose down: </h3>
+        <p>- Para e remove todos os contêineres, redes e volumes definidos no arquivo docker-compose.yml. </p>
+
+        <h3>docker-compose build: </h3>
+        <p>- Constrói ou reconstrói as imagens dos serviços definidos. </p>
+
+        <h3>docker-compose ps: </h3>
+        <p>- Lista os contêineres em execução gerenciados pelo Docker Compose. </p>
+
+        <h3>docker-compose logs: </h3>
+        <p>- Exibe os logs de saída dos serviços em execução. </p>
+
+        <h2>Exemplo de uso</h2>
+
+        <p>O Docker Compose é como um conjunto de plantas mobiliadas para construir um bairro inteiro. Ele não define apenas uma única casa (um único serviço), mas várias casas (múltiplos serviços) e como elas se relacionam entre si. Você pode pensar no docker-compose.yml como o projeto do bairro, especificando cada casa, suas conexões (como estradas e redes) e onde ficam os serviços compartilhados (como parques ou subestações de energia). </p>
+        
+      </header>
+      <a href="../../Atividades/telaInicial/escolha.html" class="btn">Atividades</a>
+
+      
+
+      
+  </body>
+</html>

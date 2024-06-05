@@ -8,9 +8,9 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style_conatiner.css" />
+    <link rel="stylesheet" href="style_portas.css" />
     <link rel="stylesheet" href="../../Css/style.css" />
-    <title>Conteiner</title>
+    <title>Porta</title>
   </head>
   <body>
     <div class="menu-wrap">
@@ -62,25 +62,28 @@
     <div class="logo-div" >
       <a class="logo-docker" href="#"><img src="../..//Assets/docker-logo.png" alt="logo docker"></a>
   </div>
-  <h1>O que é contêiner ?</h1>
-
+    <h1>Funcionamento das Portas no Docker </h1>
     <header class="showcase">
-        <div class="container showcase-inner" style="color:#1D63ED;">
-          
-          <h2 >
-            Conceito de contêiner
-          </h2>
-          <p >Um contêiner no Docker é basicamente um pacote que contém um aplicativo e tudo o que ele precisa para funcionar. Ele é isolado de outros contêineres e do sistema operacional onde é executado, garantindo que o aplicativo seja consistente e portátil em diferentes ambientes. Em resumo, é como uma caixa que carrega um aplicativo e suas coisas, tornando-o fácil de transportar e executar em qualquer lugar. Todas as configurações e instruções para iniciar ou parar contêineres são ditadas pela imagem do Docker 
-          </p>
-          <h2>Exemplo</h2>
-          <p>
-            Voltando a ideia do exemplo anterior de construir uma casa. Cada vez que você constrói uma casa nova, você reúne todas as ferramentas e materiais novamente. Agora, pense nos contêineres como caixas de ferramentas pré-organizadas. Cada caixa (ou contêiner) contém não apenas as ferramentas (aplicativo), mas também todos os materiais (bibliotecas, configurações, etc.) necessários para construir uma parte específica da casa (executar o aplicativo). Assim, se você precisar construir várias casas, basta pegar as caixas de ferramentas certas (contêineres) para cada parte da construção. Cada caixa está pronta para uso e é isolada das outras, então você pode construir várias casas ao mesmo tempo sem que uma afete a outra. 
-          </p>
-          <p>Isso é o que os contêineres do Docker fazem: fornecem uma maneira organizada e eficiente de empacotar e executar aplicativos com tudo o que eles precisam, em ambientes isolados e portáteis.</p>
-      </header>
-      <a href="../imagem/imagem.html" class="btn">Avançar</a>
+      <div class="container showcase-inner" style="color: #1d63ed">
+        
+        <h2>Conceito e definição</h2>
+        <p>
+            Quando um contêiner Docker é criado, ele pode expor portas para que serviços dentro do contêiner sejam acessíveis a partir do ambiente externo. Isso é feito por meio do mapeamento de portas, onde uma porta do host é vinculada a uma porta dentro do contêiner. Dessa forma, o tráfego direcionado para a porta do host é redirecionado para a porta especificada dentro do contêiner. 
+        </p>
 
+        <h2>Exemplo</h2>
+        <p>
+        Imagine que você está construindo uma casa e precisa conectar os fios elétricos da casa à rede elétrica da rua. Para isso, você instala uma caixa de distribuição elétrica na casa (o contêiner Docker) e conecta os fios da caixa à rede elétrica (o ambiente externo). A porta da caixa de distribuição (a porta exposta pelo contêiner) é como uma interface que permite que a eletricidade flua da rede elétrica para dentro da casa. 
 
-      
+        </p>
+        <p>
+            Ao especificar o mapeamento de portas durante a criação do contêiner, você está essencialmente dizendo ao Docker para configurar uma conexão entre uma porta específica do host (a porta da rua) e uma porta específica dentro do contêiner (a porta da caixa de distribuição). Por exemplo, ao executar o comando docker run -d -p 80:8080 httpd, você está dizendo ao Docker para redirecionar o tráfego da porta 80 do host para a porta 8080 dentro do contêiner, permitindo que o serviço HTTP do Apache seja acessado a partir do navegador da web ao acessar a porta 80 do host. 
+        </p>
+        <p>
+            Assim, as portas no Docker desempenham um papel fundamental na garantia da acessibilidade e interoperabilidade dos contêineres, permitindo que eles se comuniquem com outros serviços e aplicativos no ambiente em que estão sendo executados. 
+        </p>
+      </div>
+    </header>
+    <a href="../docker hub/hub.html" class="btn">Avançar</a>
   </body>
 </html>
