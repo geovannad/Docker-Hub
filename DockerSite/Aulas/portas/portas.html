@@ -25,62 +25,96 @@
                 <a href="../docker/docker.html"> 1 - Conceito de Docker</a>
               </li>
               <li class="opcoes">
-                <a href="../container/container.html"> 2 - Conceito de contêiner</a>
-              </li>
-              <li class="opcoes">
-                <a href="../imagem/imagem.html">
-                  3 - Conceito de imagem</a
+                <a href="../container/container.html">
+                  2 - Conceito de contêiner</a
                 >
               </li>
-              
+              <li class="opcoes">
+                <a href="../imagem/imagem.html"> 3 - Conceito de imagem</a>
+              </li>
+
               <li class="opcoes">
                 <a href="../comandos/comandos.html">
                   4 - Executando contêiner e imagem</a
                 >
               </li>
               <li class="opcoes">
-                <a href="../portas/portas.html"> 5 - Funcionamento das Portas no Docker</a>
-              </li>
-              <li class="opcoes"><a href="../docker hub/hub.html"> 6 - Conceito de Docker Hub?</a></li>
-              <li class="opcoes">
-                <a href="../dockerFIle/fileDocker.html"> 7 - Conceito de Docker File</a>
+                <a href="../portas/portas.html">
+                  5 - Funcionamento das Portas no Docker</a
+                >
               </li>
               <li class="opcoes">
-                <a href="../docker compose/compose.html"> 8 - Conceito de Docker Compose</a>
+                <a href="../docker hub/hub.html"> 6 - Conceito de Docker Hub</a>
+              </li>
+              <li class="opcoes">
+                <a href="../dockerFIle/fileDocker.html">
+                  7 - Conceito de Docker File</a
+                >
+              </li>
+              <li class="opcoes">
+                <a href="../docker compose/compose.html">
+                  8 - Conceito de Docker Compose</a
+                >
               </li>
               <li class="grupos" style="font-size: 2rem">Exercícios:</li>
               <li class="opcoes">
-                <a href="../../Atividades/telaInicial/escolha.html">Atividades</a>
+                <a href="../../Atividades/telaInicial/escolha.html"
+                  >Atividades</a
+                >
               </li>
-              <li class="opcoes"><a href="../../Atividades/desafioFinal/desafioFinal.html">Desafio Final</a></li>
+              <li class="opcoes">
+                <a href="../../desafioFinal/desafioFinal.html">Desafio Final</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    
-    <div class="logo-div" >
-      <a class="logo-docker" href="#"><img src="../..//Assets/docker-logo.png" alt="logo docker"></a>
-  </div>
-    <h1>Funcionamento das Portas no Docker </h1>
+
+    <div class="logo-div">
+      <a class="logo-docker" href="#"
+        ><img src="../..//Assets/docker-logo.png" alt="logo docker"
+      /></a>
+    </div>
+    <h1>Funcionamento das Portas no Docker</h1>
     <header class="showcase">
       <div class="container showcase-inner" style="color: #1d63ed">
-        
         <h2>Conceito e definição</h2>
         <p>
-            Quando um contêiner Docker é criado, ele pode expor portas para que serviços dentro do contêiner sejam acessíveis a partir do ambiente externo. Isso é feito por meio do mapeamento de portas, onde uma porta do host é vinculada a uma porta dentro do contêiner. Dessa forma, o tráfego direcionado para a porta do host é redirecionado para a porta especificada dentro do contêiner. 
+          Quando um contêiner Docker é criado, ele pode expor portas para que
+          serviços dentro do contêiner sejam acessíveis a partir do ambiente
+          externo. Isso é feito por meio do mapeamento de portas, onde uma porta
+          do host é vinculada a uma porta dentro do contêiner. Dessa forma, o
+          tráfego direcionado para a porta do host é redirecionado para a porta
+          especificada dentro do contêiner.
         </p>
 
         <h2>Exemplo</h2>
         <p>
-        Imagine que você está construindo uma casa e precisa conectar os fios elétricos da casa à rede elétrica da rua. Para isso, você instala uma caixa de distribuição elétrica na casa (o contêiner Docker) e conecta os fios da caixa à rede elétrica (o ambiente externo). A porta da caixa de distribuição (a porta exposta pelo contêiner) é como uma interface que permite que a eletricidade flua da rede elétrica para dentro da casa. 
-
+          Imagine que você está construindo uma casa e precisa conectar os fios
+          elétricos da casa à rede elétrica da rua. Para isso, você instala uma
+          caixa de distribuição elétrica na casa (o contêiner Docker) e conecta
+          os fios da caixa à rede elétrica (o ambiente externo). A porta da
+          caixa de distribuição (a porta exposta pelo contêiner) é como uma
+          interface que permite que a eletricidade flua da rede elétrica para
+          dentro da casa.
         </p>
         <p>
-            Ao especificar o mapeamento de portas durante a criação do contêiner, você está essencialmente dizendo ao Docker para configurar uma conexão entre uma porta específica do host (a porta da rua) e uma porta específica dentro do contêiner (a porta da caixa de distribuição). Por exemplo, ao executar o comando docker run -d -p 80:8080 httpd, você está dizendo ao Docker para redirecionar o tráfego da porta 80 do host para a porta 8080 dentro do contêiner, permitindo que o serviço HTTP do Apache seja acessado a partir do navegador da web ao acessar a porta 80 do host. 
+          Ao especificar o mapeamento de portas durante a criação do contêiner,
+          você está essencialmente dizendo ao Docker para configurar uma conexão
+          entre uma porta específica do host (a porta da rua) e uma porta
+          específica dentro do contêiner (a porta da caixa de distribuição). Por
+          exemplo, ao executar o comando docker run -d -p 80:8080 httpd, você
+          está dizendo ao Docker para redirecionar o tráfego da porta 80 do host
+          para a porta 8080 dentro do contêiner, permitindo que o serviço HTTP
+          do Apache seja acessado a partir do navegador da web ao acessar a
+          porta 80 do host.
         </p>
         <p>
-            Assim, as portas no Docker desempenham um papel fundamental na garantia da acessibilidade e interoperabilidade dos contêineres, permitindo que eles se comuniquem com outros serviços e aplicativos no ambiente em que estão sendo executados. 
+          Assim, as portas no Docker desempenham um papel fundamental na
+          garantia da acessibilidade e interoperabilidade dos contêineres,
+          permitindo que eles se comuniquem com outros serviços e aplicativos no
+          ambiente em que estão sendo executados.
         </p>
       </div>
     </header>

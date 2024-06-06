@@ -29,15 +29,15 @@ body {
   
 }
 .container {
-  width: 1200px;
+  
   overflow: hidden;
   padding: 0 5.3rem;
   margin: 0 auto;
-  max-width: 100%;
+  
 }
 .showcase {
   height: 100%;
-  margin-top: 40px;
+  margin-top: 10px;
   
 }
 
@@ -122,4 +122,24 @@ p{
   background-color: var(--overlay-color);
   height: 2px;
   width: 100%;
+}
+
+.div-botoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-right: 5.3rem;
+}
+
+.btn1 {
+  border: none;
+  background-color: #1d63ed;
+  border-radius: 10px;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  transition: opacity 1s ease-in-out;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
