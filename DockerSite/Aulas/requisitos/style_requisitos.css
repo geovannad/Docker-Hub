@@ -247,7 +247,9 @@ label{
   border-radius: 10px;
   padding: 10px;
   z-index: 10000;
+  user-select: none;
 }
+
 input{
   margin-right: 10px;
 }
