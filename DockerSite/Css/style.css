@@ -229,3 +229,10 @@ h1 {
   margin-left: 20px;
   margin-bottom: 20px;
 }
+
+.selecionar{
+  cursor: pointer;
+}
+.block{
+  cursor: not-allowed;
+}

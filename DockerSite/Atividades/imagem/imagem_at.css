@@ -26,6 +26,7 @@ body {
   background-position-y: 100%;
 }
 .container {
+  user-select: none;
   overflow: hidden;
   padding: 0 5.3rem;
   margin: 0 auto;
@@ -61,6 +62,7 @@ p {
 }
 
 .comandos code {
+
   width: 600px;
 }
 
