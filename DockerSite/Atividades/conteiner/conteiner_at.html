@@ -8,9 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="conteiner_at.css" />
+    <link rel="stylesheet" href="../../Css/style_at.css" />
     <link rel="stylesheet" href="../../Css/style.css" />
-    <title>Hamburger Menu Overlay</title>
+    <script src="conteiner_at.js" defer></script>
+    <title>Atividade</title>
   </head>
   <body>
     <div class="menu-wrap">
@@ -63,35 +64,39 @@
         ><img src="../..//Assets/docker-logo.png" alt="logo docker"
       /></a>
     </div>
-    <h1>Atividade</h1>
+    <h1>Atividade de Contêiner</h1>
 
-    <header class="showcase">
+    <div class="showcase">
       <div class="container showcase-inner" style="color: #1d63ed">
-        <h2 style="font-size: 2.1rem">1ª questão</h2>
-        <p>
-          Lorem ipsum bibendum id ornare feugiat diam gravida convallis nam
-          curae iaculis lobortis, curabitur ac vitae pharetra metus sapien
-          convallis ut dictum quam pretium, magna cubilia himenaeos cubilia et a
-          senectus etiam augue ligula ullamcorper. venenatis vulputate lorem
-          adipiscing ultricies mollis consectetur nam arcu torquent volutpat
-          risus cras non consequat eleifend mollis, elit vulputate volutpat hac
-          euismod suscipit leo eleifend est hendrerit tempor vestibulum ipsum
-          magna.
+        <h2>1ª questão</h2>
+        <p>Qual comando você usaria para acessar o terminal de um contêiner em execução chamado "ub"? 
         </p>
 
-        <div class="comandos">
-          <code class="cod-elem"> Exemplo do comando </code>
-          <code class="cod-elem"> Exemplo do comando </code>
-          <code class="cod-elem"> Exemplo do comando </code>
-          <code class="cod-elem"> Exemplo do comando </code>
+        <div class="comandos" id="resposta1">
+          <code class="cod-elem" id="resposta1a"> docker connect -it ub bash </code>
+          <code class="cod-elem" id="resposta1b"> docker attach -it ub bash </code>
+          <code class="cod-elem" id="resposta1c"> docker exec -it ub bash </code>
+          <code class="cod-elem" id="resposta1d"> docker open -it ub bash </code>
+        </div>
+      
+      <h2>2ª questão</h2>
+        <p>Qual comando é usado para mapear a porta 80 do host para a porta 8080 de um contêiner? 
+        </p>
+
+        <div class="comandos" id="resposta2">
+          <code class="cod-elem" id="resposta2a"> docker run -p 8080:80 app</code>
+          <code class="cod-elem" id="resposta2b"> docker run -p 80:8080 app </code>
+          <code class="cod-elem" id="resposta2c"> docker run --port 8080:80 app</code>
+          <code class="cod-elem" id="resposta2d"> docker run --port 80:8080 app </code>
         </div>
       </div>
+    </div>
 
     
       </div>
     </header>
     <div class="div-botoes">
-    <a href="##" class="btn1">Finalizar</a>
+    <a href="##" class="btn1" id="finalizar">Finalizar</a>
     <a href="../imagem/imagem_at.html"class="btn1">Próximo Tema</a>
   </div>
   </body>
