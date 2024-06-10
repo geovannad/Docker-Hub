@@ -10,6 +10,8 @@
     />
     <link rel="stylesheet" href="../../Css/style_at.css" />
     <link rel="stylesheet" href="../../Css/style.css" />
+    <link rel="stylesheet" href="./dockercompose_at.css" />
+    <script src="./dockercompose.js" defer></script>
     <title>Hamburger Menu Overlay</title>
   </head>
   <body>
@@ -22,10 +24,14 @@
             <ul>
               <li class="grupos" style="font-size: 2rem">Aulas:</li>
               <li class="opcoes">
-                <a href="../../Aulas/docker/docker.html"> 1 - Conceito de Docker</a>
+                <a href="../../Aulas/docker/docker.html">
+                  1 - Conceito de Docker</a
+                >
               </li>
               <li class="opcoes">
-                <a href="../../Aulas/container/container.html"> 2 - Conceito de contêiner</a>
+                <a href="../../Aulas/container/container.html">
+                  2 - Conceito de contêiner</a
+                >
               </li>
               <li class="opcoes">
                 <a href="../../Aulas/imagem/imagem.html">
@@ -38,21 +44,33 @@
                 >
               </li>
               <li class="opcoes">
-                <a href="../../Aulas/portas/portas.html"> 5 - Funcionamento das Portas no Docker</a>
-              </li>
-              <li class="opcoes"><a href="../../Aulas/docker hub/hub.html"> 6 - Conceito de Docker Hub?</a></li>
-              <li class="opcoes">
-                <a href="../../Aulas.dockerFIle/fileDocker.html"> 7 - Conceito de Docker File</a>
+                <a href="../../Aulas/portas/portas.html">
+                  5 - Funcionamento das Portas no Docker</a
+                >
               </li>
               <li class="opcoes">
-                <a href="../../Aulas/docker compose/compose.html"> 8 - Conceito de Docker Compose</a>
+                <a href="../../Aulas/docker hub/hub.html">
+                  6 - Conceito de Docker Hub?</a
+                >
+              </li>
+              <li class="opcoes">
+                <a href="../../Aulas.dockerFIle/fileDocker.html">
+                  7 - Conceito de Docker File</a
+                >
+              </li>
+              <li class="opcoes">
+                <a href="../../Aulas/docker compose/compose.html">
+                  8 - Conceito de Docker Compose</a
+                >
               </li>
               <li class="grupos" style="font-size: 2rem">Exercícios:</li>
               <li class="opcoes">
                 <a href="../telaInicial/escolha.html">Atividades</a>
               </li>
-              <li class="opcoes"><a href="../../desafioFinal/desafioFinal.html">Desafio Final</a></li>
-              </ul>
+              <li class="opcoes">
+                <a href="../../desafioFinal/desafioFinal.html">Desafio Final</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -67,32 +85,261 @@
 
     <header class="showcase">
       <div class="container showcase-inner" style="color: #1d63ed">
-        <h2 style="font-size: 2.1rem">1ª questão</h2>
+        <h2>1ª questão</h2>
         <p>
-          Lorem ipsum bibendum id ornare feugiat diam gravida convallis nam
-          curae iaculis lobortis, curabitur ac vitae pharetra metus sapien
-          convallis ut dictum quam pretium, magna cubilia himenaeos cubilia et a
-          senectus etiam augue ligula ullamcorper. venenatis vulputate lorem
-          adipiscing ultricies mollis consectetur nam arcu torquent volutpat
-          risus cras non consequat eleifend mollis, elit vulputate volutpat hac
-          euismod suscipit leo eleifend est hendrerit tempor vestibulum ipsum
-          magna.
+          Em um ambiente de produção, como você lidaria com a escalabilidade dos
+          serviços usando o Docker Compose? Descreva os passos e as
+          considerações envolvidas.
         </p>
 
-        <div class="comandos">
-          <code class="cod-elem"> Exemplo do comando </code>
-          <code class="cod-elem"> Exemplo do comando </code>
-          <code class="cod-elem"> Exemplo do comando </code>
-          <code class="cod-elem"> Exemplo do comando </code>
+        <div class="comandos selecionar" id="resposta1">
+          <code class="cod-elem" id="resposta1a"
+            >Modificando manualmente o número de réplicas de cada serviço no
+            arquivo Docker Compose.</code
+          >
+          <code class="cod-elem" id="resposta1b"
+            >Utilizando um orquestrador de contêineres, como o Docker Swarm ou o
+            Kubernetes, em conjunto com o Docker Compose.
+          </code>
+          <code class="cod-elem" id="resposta1c"
+            >Criando várias instâncias do arquivo de configuração do Docker
+            Compose.
+          </code>
+          <code class="cod-elem" id="resposta1d"
+            >Utilizando a instrução docker-compose scale.
+          </code>
         </div>
-      </div>
 
-    
+        <h2>2ª questão</h2>
+        <p>
+          Descreva a importância da definição de variáveis de ambiente no Docker
+          Compose e como você as utilizaria para configurar diferentes
+          ambientes, como desenvolvimento, teste e produção.
+        </p>
+
+        <div class="comandos selecionar" id="resposta2">
+          <code class="cod-elem" id="resposta2a">
+            Não há necessidade de variáveis de ambiente no Docker Compose, pois
+            todas as configurações podem ser definidas diretamente nos arquivos
+            YAML.
+          </code>
+          <code class="cod-elem" id="resposta2b">
+            As variáveis de ambiente são úteis apenas para fins de depuração
+            durante o desenvolvimento, não sendo relevantes em ambientes de
+            produção.
+          </code>
+          <code class="cod-elem" id="resposta2c"
+            >As variáveis de ambiente são usadas apenas para autenticação em
+            serviços externos.
+          </code>
+          <code class="cod-elem" id="resposta2d"
+            >As variáveis de ambiente no Docker Compose permitem a
+            personalização de configurações para diferentes ambientes, evitando
+            a necessidade de alterações diretas nos arquivos de configuração.
+          </code>
+        </div>
+
+        <h2>3ª questão</h2>
+        <p>
+          Qual é o papel do Docker Compose em uma arquitetura de microsserviços
+          e como ele facilita o gerenciamento desses serviços?
+        </p>
+
+        <div class="comandos selecionar" id="resposta3">
+          <code class="cod-elem" id="resposta3a">
+            O Docker Compose automatiza o processo de deploy de contêineres em
+            um ambiente de produção.</code
+          >
+          <code class="cod-elem" id="resposta3b">
+            O Docker Compose é responsável pelo monitoramento em tempo real dos
+            contêineres.
+          </code>
+          <code class="cod-elem" id="resposta3c">
+            O Docker Compose facilita o gerenciamento de vários contêineres,
+            permitindo a definição e o controle de serviços interdependentes em
+            um único arquivo YAML.
+          </code>
+          <code class="cod-elem" id="resposta3d">
+            O Docker Compose é usado para criar imagens Docker.
+          </code>
+        </div>
+
+        <h2>4ª questão</h2>
+        <p>
+          Qual comando Docker Compose é usado para iniciar todos os serviços
+          definidos no arquivo docker-compose.yml?
+        </p>
+
+        <div class="comandos selecionar" id="resposta4">
+          <code class="cod-elem" id="resposta4a"> docker-compose start </code>
+          <code class="cod-elem" id="resposta4b"> docker-compose up </code>
+          <code class="cod-elem" id="resposta4c"> docker-compose run </code>
+          <code class="cod-elem" id="resposta4d"> docker-compose init </code>
+        </div>
+        <h2>5ª questão</h2>
+        <p>
+          Como você pode parar e remover todos os contêineres, redes e volumes
+          definidos em um arquivo Docker Compose?
+        </p>
+
+        <div class="comandos selecionar" id="resposta5">
+          <code class="cod-elem" id="resposta5a"> docker-compose stop</code>
+          <code class="cod-elem" id="resposta5b">docker-compose down </code>
+          <code class="cod-elem" id="resposta5c"> docker-compose remove </code>
+          <code class="cod-elem" id="resposta5d">docker-compose clean </code>
+        </div>
+
+        <h2>6ª questão</h2>
+        <p>
+          Organize os comandos do docker file que estão na caixa a esquerda na
+          caixa da direita
+        </p>
+        <h3>Docker File</h3>
+
+        <div class="exercicio">
+          <div class="column" id="caixa resposta6">
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta76"
+              style="padding-left: 75px"
+            >
+              <code>dockerfile: DockerFile</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta77"
+              style="padding-left: 50px"
+            >
+              <code>enviroment:</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta710"
+              style="padding-left: 75px"
+            >
+              <code>POSTGRES_PASSWORD: mypassaword</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta714"
+              style="padding-left: 50px"
+            >
+              <code>build:</code>
+            </div>
+            <div class="cod item" draggable="true" id="resposta71">
+              <code>version:'3.8'</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta74"
+              style="padding-left: 50px"
+            >
+              <code>build:</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta73"
+              style="padding-left: 25px"
+            >
+              <code> postgres:</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta78"
+              style="padding-left: 75px"
+            >
+              <code>POSTGRES_DB: mydatabase</code>
+            </div>
+            <div class="cod item" draggable="true" id="resposta72">
+              <code>services</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta713"
+              style="padding-left: 25px"
+            >
+              <code> nginx:</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta75"
+              style="padding-left: 75px"
+            >
+              <code>context: ./postgres</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta716"
+              style="padding-left: 75px"
+            >
+              <code>dockerfile: DockerFile</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta711"
+              style="padding-left: 50px"
+            >
+              <code>ports:</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta79"
+              style="padding-left: 75px"
+            >
+              <code>POSTGRES_USER: myuser</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta712"
+              style="padding-left: 50px"
+            >
+              <code>- "5432:5432"</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta718"
+              style="padding-left: 50px"
+            >
+              <code>- "80:80"</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta717"
+              style="padding-left: 50px"
+            >
+              <code>ports:</code>
+            </div>
+            <div
+              class="cod item"
+              draggable="true"
+              id="resposta715"
+              style="padding-left: 75px"
+            >
+              <code>context: ./nginx</code>
+            </div>
+          </div>
+
+          <div class="column"></div>
+        </div>
       </div>
     </header>
     <div class="div-botoes">
-    <a href="#" class="btn1">Finalizar</a>
+      <a href="#" class="btn1">Finalizar</a>
     </div>
-    
   </body>
 </html>

@@ -9,8 +9,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../Css/style_at.css" />
+    <link rel="stylesheet" href="./dockerfile_at.css">
     <link rel="stylesheet" href="../../Css/style.css" />
-    <title>Hamburger Menu Overlay</title>
+    <script src="dockerfile_at.js" defer></script>
+    <title>Docker File</title>
   </head>
   <body>
     <div class="menu-wrap">
@@ -67,24 +69,130 @@
 
     <header class="showcase">
       <div class="container showcase-inner" style="color: #1d63ed">
-        <h2 style="font-size: 2.1rem">1ª questão</h2>
+        <h2 >1ª questão</h2>
         <p>
-          Lorem ipsum bibendum id ornare feugiat diam gravida convallis nam
-          curae iaculis lobortis, curabitur ac vitae pharetra metus sapien
-          convallis ut dictum quam pretium, magna cubilia himenaeos cubilia et a
-          senectus etiam augue ligula ullamcorper. venenatis vulputate lorem
-          adipiscing ultricies mollis consectetur nam arcu torquent volutpat
-          risus cras non consequat eleifend mollis, elit vulputate volutpat hac
-          euismod suscipit leo eleifend est hendrerit tempor vestibulum ipsum
-          magna.
+          Qual é a função do Dockerfile?
         </p>
 
-        <div class="comandos">
-          <code class="cod-elem"> Exemplo do comando </code>
-          <code class="cod-elem"> Exemplo do comando </code>
-          <code class="cod-elem"> Exemplo do comando </code>
-          <code class="cod-elem"> Exemplo do comando </code>
+        <div class="comandos selecionar" id="resposta1">
+          <code class="cod-elem " id="resposta1a">Instalar o Docker no sistema operacional.</code>
+          <code class="cod-elem" id="resposta1b">Listar todos os contêineres em execução no host.</code>
+          <code class="cod-elem " id="resposta1c">Criar uma nova imagem a partir de um contêiner em execução. </code>
+          <code class="cod-elem " id="resposta1d"> Definir os comandos a serem executados dentro de uma imagem.  </code>
         </div>
+
+        <h2 >2ª questão</h2>
+        <p>
+          O que é um Dockerfile? 
+        </p>
+
+        <div class="comandos selecionar" id="resposta2">
+          <code class="cod-elem " id="resposta2a"> Um arquivo de registro para eventos de contêineres.</code>
+          <code class="cod-elem" id="resposta2b"> Um arquivo de script para gerenciar múltiplos contêineres. </code>
+          <code class="cod-elem " id="resposta2c">Um arquivo de texto que contém instruções para construir uma imagem Docker.  </code>
+          <code class="cod-elem " id="resposta2d"> Um arquivo de configuração para o Docker Compose.  </code>
+        </div>
+
+        
+        <h2 >3ª questão</h2>
+        <p>
+          Qual é a instrução no Dockerfile para copiar arquivos do host para a imagem Docker? 
+        </p>
+
+        <div class="comandos selecionar" id="resposta3">
+          <code class="cod-elem " id="resposta3a"> COPY</code>
+          <code class="cod-elem" id="resposta3b"> ADD </code>
+          <code class="cod-elem " id="resposta3c"> MOVE  </code>
+          <code class="cod-elem " id="resposta3d"> TRANSFER  </code>
+        </div>
+         
+        <h2 >4ª questão</h2>
+        <p>
+          Qual comando no Dockerfile é usado para definir o diretório de trabalho de um contêiner? 
+        </p>
+
+        <div class="comandos selecionar" id="resposta4">
+          <code class="cod-elem " id="resposta4a"> RUN</code>
+          <code class="cod-elem" id="resposta4b"> CMD </code>
+          <code class="cod-elem " id="resposta4c"> WORKDIR  </code>
+          <code class="cod-elem " id="resposta4d"> SETDIR  </code>
+        </div>
+        <h2 >5ª questão</h2>
+        <p>
+          O que a instrução EXPOSE faz no Dockerfile?
+        </p>
+
+        <div class="comandos selecionar" id="resposta5">
+          <code class="cod-elem " id="resposta5a"> Inicia um serviço dentro do contêiner.</code>
+          <code class="cod-elem" id="resposta5b"> Especifica qual porta o contêiner estará escutando.  </code>
+          <code class="cod-elem " id="resposta5c">  Define variáveis de ambiente no contêiner.  </code>
+          <code class="cod-elem " id="resposta5d"> Executa um comando no contêiner.  </code>
+        </div>
+        <h2 >6ª questão</h2>
+        <p>
+          Qual é a diferença entre as instruções RUN e CMD no Dockerfile? 
+        </p>
+
+        <div class="comandos selecionar" id="resposta6">
+          <code class="cod-elem " id="resposta6a"> Ambas as instruções são usadas para definir o comando padrão a ser executado quando o contêiner for iniciado.</code>
+          <code class="cod-elem" id="resposta6b"> Ambas as instruções são usadas para executar comandos durante a construção da imagem.  </code>
+          <code class="cod-elem " id="resposta6c"> RUN define o comando padrão a ser executado quando o contêiner for iniciado, enquanto CMD executa comandos durante a construção da imagem.</code>
+          <code class="cod-elem " id="resposta6d"> RUN executa comandos durante a construção da imagem, enquanto CMD define o comando padrão a ser executado quando o contêiner for iniciado. </code>
+        </div>
+        <h2 >7ª questão</h2>
+        <p>
+         Organize os comandos do docker file que estão na caixa a esquerda na caixa da direita 
+        </p>
+            <h3>Docker File</h3>
+          
+
+          <div class="exercicio">
+            <div class="column" id="caixa resposta7">
+             
+              <div class="cod item" draggable="true" id="resposta74"><code>EXPOSE 80</code></div>
+              <div class="cod item" draggable="true" id="resposta73"><code>COPY html /usr/share/nginx/htm</code></div>
+              <div class="cod item" draggable="true" id="resposta71"><code>FROM nginx:latest
+              </code></div>
+              <div class="cod item" draggable="true" id="resposta72"><code>COPY nginx.conf /etc/nginx/nginx.conf
+              </code></div>
+            </div>
+
+            <div class="column">
+            </div>
+          </div>
+          <h2 >8ª questão</h2>
+          <p>
+           Organize os comandos do docker file que estão na caixa a esquerda na caixa da direita 
+          </p>
+              <h3>Docker File</h3>
+            
+  
+            <div class="exercicio">
+              <div class="column" id="caixa resposta8">
+               
+                <div class="cod item" draggable="true" id="reposta84"><code>ENV POSTGRES_PASSWORD=mypassword
+                </code></div>
+                <div class="cod item" draggable="true" id="resposta85"><code>COPY init.sql /docker-entrypoint-initdb.d/
+                </code></div>
+                <div class="cod item" draggable="true" id="resposta83"><code>
+                  ENV POSTGRES_USER=myuser                  
+                  </code></div>
+                  <div class="cod item" draggable="true" id="reposta86"><code> EXPOSE 5432
+                  </code></div>                
+                  <div class="cod item" draggable="true" id="resposta82"><code>ENV POSTGRES_DB=mydatabase
+                  </code></div>
+                <div class="cod item" draggable="true" id="resposta81"><code> FROM postgres:latest
+
+                </code></div>                
+              </div>
+  
+              <div class="column">
+              </div>
+            </div>
+  
+
+
+
       </div>
 
     
@@ -94,5 +202,8 @@
       <a href="##" class="btn1">Finalizar</a>
       <a href="../dockerCompose/dockercompose_at.html" class="btn1">Próximo Tema</a>
     </div>
+    
+    
   </body>
+
 </html>
