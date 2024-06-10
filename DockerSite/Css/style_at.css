@@ -29,6 +29,7 @@
     
   }
   .container {
+    user-select: none;
     display: flex;
     justify-content: center;
     overflow: hidden;

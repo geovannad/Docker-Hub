@@ -1,9 +1,9 @@
 "use strict";
 
 //array onde guardaremos as respostas selecionadas
-let respostas = ['','','','',''];
+let respostas = ['','','','','',''];
 //array do gabarito
-const gabarito = ['a', 'b', 'c', 'd', 'a'];
+const gabarito = ['c', 'a', 'c', 'b', 'c','b'];
 //variavel para verificar se o desafio foi finalizado
 let finalizado = false;
 
