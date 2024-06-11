@@ -178,3 +178,9 @@
     height: 2px;
     width: 100%;
   }
+
+  .selecionado{
+    background-color: #1d62ed3d;
+    border: 2px solid #1d62ed;
+    
+  }
