@@ -84,7 +84,7 @@
     color: var(--primary-color);
     font-size: 1.3rem;
     color: var(--primary-color);
-    background-color: #D9D9D9;
+    
     padding: 15px;
     width: 20%;
     text-align: center;
@@ -134,7 +134,8 @@
     border: 2px solid var(--primary-color);
     border-radius: 1rem;
     min-width: 30%;
-    height: 1000px;
+    height: auto;
+    min-height: 1000px;
     align-items: center;
   }
 
@@ -165,6 +166,9 @@
     justify-content: center;
 
   }
+  strong{
+    color: var(--overlay-color);
+  }
 
   .caixas{
     width: 260px;
@@ -179,8 +183,21 @@
     width: 100%;
   }
 
-  .selecionado{
-    background-color: #1d62ed3d;
-    border: 2px solid #1d62ed;
-    
-  }
+
+
+  
+.certo{
+  background-color: rgba(0, 183, 18, 0.233);
+  border: 2px solid rgb(0, 183, 18)
+}
+
+.errado{
+  background-color: rgba(255, 0, 0, 0.235);
+  border: 2px solid red
+}
+
+.selecionado{
+  background-color: #1d62ed3d;
+  border: 2px solid #1d62ed;
+  
+}

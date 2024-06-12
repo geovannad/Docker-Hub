@@ -31,10 +31,7 @@ function getNewPosition(column, posY) {
   return result;
 }
 
-function clickme() {
-  const columnsAgain = document.querySelectorAll(".column");
-  console.log(columnsAgain);
-}
+// verificação das repostas 
 
 ("use strict");
 
@@ -45,9 +42,11 @@ const gabarito = ["d", "c", "a", "c", "b", "d"];
 //variavel para verificar se o desafio foi finalizado
 let finalizado = false;
 
+
+//exercicio 8 de drag
 const gabaritoDrag8 = ["1", "2", "2", "2", "3", "4"];
 let respostaDrag8 = [];
-//
+// exercicio 7 de drag
 const gabaritoDrag7 = ["1", "2", "2", "3"];
 let respostaDrag7 = [];
 
@@ -101,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //adiciona um evento de clique no botão
   botaoFinalizar.addEventListener("click", () => {
-
+    //puxando elementos da coluna final
     const elementoFinal8 = document.getElementsByClassName("final8");
     const qtdChild8 = elementoFinal8[0].children.length;
 
@@ -183,11 +182,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
       botaoFinalizar.classList.add("block");
-      const comandosB = document.querySelectorAll(".comandos .cod-elem");
+      const comandosB = document.querySelectorAll(".comandos .cod-elem ");
       comandosB.forEach((comandoB) => {
         comandoB.classList.remove("selecionar");
         comandoB.classList.add("block");
-      });
+
+      }
+      
+
+    );
+    const comandoDrag = document.getElementsByClassName("cod");
+    for (let i = 0; i < comandoDrag.length; i++) {
+      comandoDrag[i].draggable = false;
+      
+    }
     }
   });
 });

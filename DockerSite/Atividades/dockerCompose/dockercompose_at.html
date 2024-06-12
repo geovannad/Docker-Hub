@@ -191,17 +191,17 @@
 
         <h2>6ª questão</h2>
         <p>
-          Organize os comandos do docker file que estão na caixa a esquerda na
-          caixa da direita
+          Organize os comandos do docker compose que estão na caixa a esquerda na
+          caixa da direita. Primeiro crie um contêiner do <strong>postgres</strong> e depois o do <strong>nginx</strong>, lembre-se que para definifir o acesso com o bando de dados tem uma ordem com os comandos.
         </p>
-        <h3>Docker File</h3>
+        <h3>Docker Compose</h3>
 
         <div class="exercicio">
           <div class="column" id="caixa resposta6">
             <div
               class="cod item"
               draggable="true"
-              id="resposta76"
+              id="6"
               style="padding-left: 75px"
             >
               <code>dockerfile: DockerFile</code>
@@ -209,7 +209,7 @@
             <div
               class="cod item"
               draggable="true"
-              id="resposta77"
+              id="7"
               style="padding-left: 50px"
             >
               <code>enviroment:</code>
@@ -217,7 +217,7 @@
             <div
               class="cod item"
               draggable="true"
-              id="resposta710"
+              id="10"
               style="padding-left: 75px"
             >
               <code>POSTGRES_PASSWORD: mypassaword</code>
@@ -225,18 +225,18 @@
             <div
               class="cod item"
               draggable="true"
-              id="resposta714"
+              id="4"
               style="padding-left: 50px"
             >
               <code>build:</code>
             </div>
-            <div class="cod item" draggable="true" id="resposta71">
+            <div class="cod item" draggable="true" id="1">
               <code>version:'3.8'</code>
             </div>
             <div
               class="cod item"
               draggable="true"
-              id="resposta74"
+              id="4"
               style="padding-left: 50px"
             >
               <code>build:</code>
@@ -244,7 +244,7 @@
             <div
               class="cod item"
               draggable="true"
-              id="resposta73"
+              id="3"
               style="padding-left: 25px"
             >
               <code> postgres:</code>
@@ -252,18 +252,18 @@
             <div
               class="cod item"
               draggable="true"
-              id="resposta78"
+              id="8"
               style="padding-left: 75px"
             >
               <code>POSTGRES_DB: mydatabase</code>
             </div>
-            <div class="cod item" draggable="true" id="resposta72">
+            <div class="cod item" draggable="true" id="resposta2">
               <code>services</code>
             </div>
             <div
               class="cod item"
               draggable="true"
-              id="resposta713"
+              id="13"
               style="padding-left: 25px"
             >
               <code> nginx:</code>
@@ -271,7 +271,7 @@
             <div
               class="cod item"
               draggable="true"
-              id="resposta75"
+              id="5"
               style="padding-left: 75px"
             >
               <code>context: ./postgres</code>
@@ -279,7 +279,7 @@
             <div
               class="cod item"
               draggable="true"
-              id="resposta716"
+              id="6"
               style="padding-left: 75px"
             >
               <code>dockerfile: DockerFile</code>
@@ -287,7 +287,7 @@
             <div
               class="cod item"
               draggable="true"
-              id="resposta711"
+              id="11"
               style="padding-left: 50px"
             >
               <code>ports:</code>
@@ -295,7 +295,7 @@
             <div
               class="cod item"
               draggable="true"
-              id="resposta79"
+              id="9"
               style="padding-left: 75px"
             >
               <code>POSTGRES_USER: myuser</code>
@@ -303,7 +303,7 @@
             <div
               class="cod item"
               draggable="true"
-              id="resposta712"
+              id="12"
               style="padding-left: 50px"
             >
               <code>- "5432:5432"</code>
@@ -311,7 +311,7 @@
             <div
               class="cod item"
               draggable="true"
-              id="resposta718"
+              id="18"
               style="padding-left: 50px"
             >
               <code>- "80:80"</code>
@@ -319,7 +319,7 @@
             <div
               class="cod item"
               draggable="true"
-              id="resposta717"
+              id="11"
               style="padding-left: 50px"
             >
               <code>ports:</code>
@@ -327,14 +327,14 @@
             <div
               class="cod item"
               draggable="true"
-              id="resposta715"
+              id="15"
               style="padding-left: 75px"
             >
               <code>context: ./nginx</code>
             </div>
           </div>
 
-          <div class="column"></div>
+          <div class="column final"></div>
         </div>
       </div>
     </header>

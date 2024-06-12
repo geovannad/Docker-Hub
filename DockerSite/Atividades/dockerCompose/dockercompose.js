@@ -45,6 +45,9 @@ const gabarito = ['b', 'd','c','b','b'];
 //variavel para verificar se o desafio foi finalizado
 let finalizado = false;
 
+// exercicio 7 de drag
+const gabaritoDrag7 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "4", "15", "6", "11", "18"];
+let respostaDrag7 = [];
 
 //O evento DOMContentLoaded é disparado quando o documento HTML inicial foi completamente carregado e analisado. Isso é útil para garantir que o código JavaScript que manipula o DOM seja executado apenas após a estrutura do documento estar completamente carregada
 document.addEventListener('DOMContentLoaded', () => {
@@ -95,6 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //adiciona um evento de clique no botão
     botaoFinalizar.addEventListener('click', () => {
+        const elementoFinal = document.getElementsByClassName("final");
+        const qtdChild = elementoFinal[0].children.length;
 
         //variavel para verificar se todas as questões foram respondidas
             let temVazio = false;
@@ -105,12 +110,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         //alerta se alguma questão não foi respondida
-            if(temVazio) {
+            if(temVazio == true || qtdChild < 18) {
                 alert("Por favor, responda todas as questões.");
             } else {
                 //finaliza o desafio
                 finalizado = true;
 
+                            
+                for (let i = 0; i < qtdChild; i++) {
+                    respostaDrag7.push(elementoFinal[0].children[i].id);
+                    console.log(respostaDrag7);
+                }
+                //comparar resposta questão 7
+                for (let i = 0; i < respostaDrag7.length; i++) {
+                    if (gabaritoDrag7[i] === respostaDrag7[i]) {
+                    elementoFinal[0].children[i].classList.add("certo");
+                    } else {
+                    elementoFinal[0].children[i].classList.add("errado");
+                    }
+                }
                 //verifica se o gabarito é o mesmo que as respostas
                 for (let i = 0; i < respostas.length; i++) {
 
@@ -144,6 +162,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         comandoB.classList.remove('selecionar');
                         comandoB.classList.add('block');
                     })
+                                    
+                    const comandoDrag = document.getElementsByClassName("cod");
+                    for (let i = 0; i < comandoDrag.length; i++) {
+                    comandoDrag[i].draggable = false;
+                    
+                    }
 
 
         }
