@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./revisao.css" />
     <link rel="stylesheet" href="../../Css/style.css" />
 
+    <script src="revisao.js" defer></script>
+    
     <title>Hamburger Menu Overlay</title>
   </head>
   <body>
@@ -49,7 +51,7 @@
               </li>
               <li class="opcoes">
                 <a href="../../Aulas/docker hub/hub.html">
-                  6 - Conceito de Docker Hub?</a
+                  6 - Conceito de Docker Hub</a
                 >
               </li>
               <li class="opcoes">
@@ -75,31 +77,35 @@
       </div>
     </div>
 
-    <a class="logo-docker" href="#"><img src="../../Assets/docker-logo.png" alt="logo docker"></a><br><br>
+    <div class="logo-div" >
+      <a class="logo-docker" href="#"><img src="../..//Assets/docker-logo.png" alt="logo docker"></a>
+    </div>
+
+    <h1>Revisão</h1>
 
     <header class="showcase">
         <div class="container showcase-inner" style="color:#1D63ED;">
           
-          <p >Agora você precisa baixar uma imagem do ubuntu, criar um conteiner a partir dela, e subir a sua imagem para o dockerhub. após isso, você precisa parar o conteiner, remove-lo logo em seguida remover a imagem.</p><br>
-          <p>clique nos comandos na ordem correta</p>
+          <p>Para relembrar os comandos vistos, agora você precisa baixar uma imagem do ubuntu que está no dockerhub, criar um contêiner a partir dela, e subir a sua imagem para o dockerhub. após isso, você precisa parar o contêiner, removê-lo e logo em seguida remover a imagem.</p><br>
+          <p>Selecione os comandos na ordem correta</p>
 
           <div class="comandos" >
-            <code class="cod-elem">
+            <code id="run" class="cod-elem">
               docker run -- name meuConteiner ubuntu
             </code>
-            <code class="cod-elem">
+            <code id="stop" class="cod-elem">
               docker stop meuConteiner
             </code>
-            <code class="cod-elem">
+            <code id="pull" class="cod-elem">
               docker pull ubuntu:latest
             </code>
-            <code class="cod-elem">
+            <code id="rm" class="cod-elem">
               docker rm meuConteiner
             </code>
-            <code class="cod-elem">
+            <code id="rmi" class="cod-elem">
               docker rmi ubuntu:latest
             </code>
-            <code class="cod-elem">
+            <code id="push" class="cod-elem">
               docker push username:minhaImagem
             </code>
             
@@ -120,7 +126,8 @@
 
         <div id="hub" class="caixas">
             <p>Docker Hub</p>
-            <div class="linha"></div>
+            <div class="linha">
+            </div>
         </div>
 
       </div>

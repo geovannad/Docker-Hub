@@ -124,3 +124,27 @@
     height: 2px;
     width: 100%;
   }
+
+  .cod-elem.correto {
+    background-color: rgb(80, 179, 65);
+    color: white;
+  }
+
+.cod-elem.erro {
+  animation: shake 0.5s;
+  background-color: rgb(181, 35, 35);
+  color: white;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.imagem{
+  height: 90px;
+  margin-top: 10px;
+}
