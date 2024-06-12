@@ -29,11 +29,10 @@
     
   }
   .container {
-    width: 1200px;
     overflow: hidden;
     padding: 0 5.3rem;
     margin: 0 auto;
-    max-width: 100%;
+    
   }
   .showcase {
     height: 100%;
