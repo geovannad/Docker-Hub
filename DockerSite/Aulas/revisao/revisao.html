@@ -62,11 +62,9 @@
                   8 - Conceito de Docker Compose</a
                 >
               </li>
-              
+
               <li class="opcoes">
-                <a href="./revisao.html">
-                  9 - Revisão de comandos</a
-                >
+                <a href="./revisao.html"> 9 - Revisão de comandos</a>
               </li>
               <li class="grupos" style="font-size: 2rem">Exercícios:</li>
               <li class="opcoes">
@@ -87,56 +85,45 @@
     </div>
 
     <header class="showcase">
-        <div class="container showcase-inner" style="color:#1D63ED;">
-          
-          <p >Agora você precisa baixar uma imagem do ubuntu, criar um conteiner a partir dela, e subir a sua imagem para o dockerhub. após isso, você precisa parar o conteiner, remove-lo logo em seguida remover a imagem.</p><br>
-          <p>clique nos comandos na ordem correta</p>
+      <div class="container showcase-inner" style="color: #1d63ed">
+        <p>
+          Agora você precisa baixar uma imagem do ubuntu, criar um conteiner a
+          partir dela, e subir a sua imagem para o dockerhub. após isso, você
+          precisa parar o conteiner, remove-lo logo em seguida remover a imagem.
+        </p>
+        <br />
+        <p>clique nos comandos na ordem correta</p>
 
-          <div class="comandos" >
-            <code class="cod-elem">
-              docker run -- name meuConteiner ubuntu
-            </code>
-            <code class="cod-elem">
-              docker stop meuConteiner
-            </code>
-            <code class="cod-elem">
-              docker pull ubuntu:latest
-            </code>
-            <code class="cod-elem">
-              docker rm meuConteiner
-            </code>
-            <code class="cod-elem">
-              docker rmi ubuntu:latest
-            </code>
-            <code class="cod-elem">
-              docker push username:minhaImagem
-            </code>
-            
-          </div>
+        <div class="comandos">
+          <code class="cod-elem"> docker run -- name meuConteiner ubuntu </code>
+          <code class="cod-elem"> docker stop meuConteiner </code>
+          <code class="cod-elem"> docker pull ubuntu:latest </code>
+          <code class="cod-elem"> docker rm meuConteiner </code>
+          <code class="cod-elem"> docker rmi ubuntu:latest </code>
+          <code class="cod-elem"> docker push username:minhaImagem </code>
         </div>
+      </div>
 
-<div class="resultados">
-
+      <div class="resultados">
         <div id="comando" class="caixas">
-            <p>Comandos</p>
-            <div class="linha"></div>
+          <p>Comandos</p>
+          <div class="linha"></div>
         </div>
 
         <div id="host" class="caixas">
-            <p>Docker Host</p>
-            <div class="linha"></div>
+          <p>Docker Host</p>
+          <div class="linha"></div>
         </div>
 
         <div id="hub" class="caixas">
-            <p>Docker Hub</p>
-            <div class="linha"></div>
+          <p>Docker Hub</p>
+          <div class="linha"></div>
         </div>
-
       </div>
+    </header>
 
-      </header>
-      
-
-      <a href="../../Atividades/telaInicial/escolha.html" class="btn">Atividade</a>
+    <a href="../../Atividades/telaInicial/escolha.html" class="btn"
+      >Atividade</a
+    >
   </body>
 </html>
