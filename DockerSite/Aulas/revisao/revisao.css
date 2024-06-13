@@ -83,24 +83,32 @@ p {
   border: solid var(--overlay-color);
   border-radius: 5px;
   margin: 30px auto;
-  width: 950px;
+  width: 1000px;
   height: 100%;
   justify-content: center;
   max-width: 100%;
+  align-items: start;
 }
 
 #comando {
-  height: 240px;
+  min-height: 240px;
+  
+  
 }
 #host {
-  height: 410px;
+  min-height: 410px;
+  
 }
 #hub {
-  height: 240px;
+
+  min-height: 240px;
+  
+  
 }
 
 .caixas {
-  width: 260px;
+
+  width: 300px;
   border: solid var(--overlay-color);
   margin: 25px 10px;
   border-radius: 1rem;
@@ -109,7 +117,8 @@ p {
 .linha {
   background-color: var(--overlay-color);
   height: 2px;
-  width: 100%;}
+  width: 100%;
+}
 
 
 
@@ -135,4 +144,13 @@ p {
 .imagem{
   height: 90px;
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.textoComando{
+  width: 90%;
+  padding: 3px;
+  margin: 15px;
+  border: 1px solid var(--overlay-color);
+  border-radius: 5px;
 }

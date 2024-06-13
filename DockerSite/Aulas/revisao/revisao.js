@@ -9,6 +9,9 @@ const imgInicial = document.createElement('img');
 imgInicial.src = '../../Assets/imagem-ubuntu-hub.png';
 imgInicial.classList.add('imagem');
 resultadosHub.appendChild(imgInicial);
+const br = document.createElement('br');
+resultadosHub.appendChild(br);
+
 
 let proximoComando = 0;
 
@@ -55,6 +58,7 @@ function interacaoResultados(element) {
 
         const p = document.createElement('p');
         p.textContent = element.textContent;
+        p.classList.add("textoComando")
         resultadosComando.appendChild(p);
     }
 }
