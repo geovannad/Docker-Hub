@@ -7,6 +7,35 @@ const gabarito = ['c', 'a', 'c', 'b', 'c','b'];
 //variavel para verificar se o desafio foi finalizado
 let finalizado = false;
 
+if ( localStorage.getItem('respostasI') != null) {
+    const resposta = JSON.parse(localStorage.getItem('respostasI'));
+    let storage = false
+    if (resposta != null) {
+    for (let i = 0; i < gabarito.length; i++) {
+        if (resposta[i]!=null){
+            storage=true
+        }
+        if (storage) {  
+            break
+        }
+    }
+         
+    if (storage) {
+        for (let i = 0; i < gabarito.length; i++) {
+            if(resposta[i]!=''){
+                console.log("entrou!")
+                const questaoResposta = document.querySelector(`#resposta${i + 1}${resposta[i]}`);
+                    if (questaoResposta) {
+                        questaoResposta.classList.add('selecionado');
+                    }
+            }
+            
+        }
+    }
+    }
+    respostas = resposta
+    }
+     
 
 //O evento DOMContentLoaded é disparado quando o documento HTML inicial foi completamente carregado e analisado. Isso é útil para garantir que o código JavaScript que manipula o DOM seja executado apenas após a estrutura do documento estar completamente carregada
 document.addEventListener('DOMContentLoaded', () => {
@@ -51,6 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    //botão de proxima atividade
+    const botaoProximo = document.getElementById('proximo');
+
+    //adiciona um evento de clique no botão
+    botaoProximo.addEventListener('click', () => {
+       if(!finalizado) {
+        localStorage.setItem('respostasI', JSON.stringify(respostas));
+       }
+    });
 
     //botão de finalizar
     const botaoFinalizar = document.getElementById('finalizar'); 
@@ -72,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 //finaliza o desafio
                 finalizado = true;
-
+                localStorage.setItem('respostasI', JSON.stringify(''));
                 //verifica se o gabarito é o mesmo que as respostas
                 for (let i = 0; i < respostas.length; i++) {
 

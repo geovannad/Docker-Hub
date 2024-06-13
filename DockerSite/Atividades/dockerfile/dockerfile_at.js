@@ -50,7 +50,35 @@ let respostaDrag8 = [];
 const gabaritoDrag7 = ["1", "2", "2", "3"];
 let respostaDrag7 = [];
 
-
+if ( localStorage.getItem('respostasD') != null) {
+const resposta = JSON.parse(localStorage.getItem('respostasD'));
+let storage = false
+if (resposta != null) {
+for (let i = 0; i < gabarito.length; i++) {
+    if (resposta[i]!=null){
+        storage=true
+    }
+    if (storage) {  
+        break
+    }
+}
+     
+if (storage) {
+    for (let i = 0; i < gabarito.length; i++) {
+        if(resposta[i]!=''){
+            console.log("entrou!")
+            const questaoResposta = document.querySelector(`#resposta${i + 1}${resposta[i]}`);
+                if (questaoResposta) {
+                    questaoResposta.classList.add('selecionado');
+                }
+        }
+        
+    }
+}
+}
+respostas = resposta
+}
+ 
 
 //pegando os elementos do ondrag
 
@@ -94,6 +122,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+   //botão de proxima atividade
+   const botaoProximo = document.getElementById('proximo');
+
+   //adiciona um evento de clique no botão
+   botaoProximo.addEventListener('click', () => {
+      if(!finalizado) {
+       localStorage.setItem('respostasD', JSON.stringify(respostas));
+      }
+   });
 
   //botão de finalizar
   const botaoFinalizar = document.getElementById("finalizar");
@@ -125,6 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       //finaliza o desafio
       finalizado = true;
+      localStorage.setItem('respostasD', JSON.stringify(''));
 
       for (let i = 0; i < qtdChild8; i++) {
         respostaDrag8.push(elementoFinal8[0].children[i].id);
