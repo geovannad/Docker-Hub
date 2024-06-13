@@ -25,7 +25,7 @@
                 <a href="../docker/docker.html"> 1 - Conceito de Docker</a>
               </li>
               <li class="opcoes">
-                <a href="../container/container.html"> 2 - Conceito de contêiner</a>
+                <a href="../container/container.html"> 2 - Conceito de container</a>
               </li>
               <li class="opcoes">
                 <a href="../imagem/imagem.html">
@@ -35,7 +35,7 @@
               
               <li class="opcoes">
                 <a href="../comandos/comandos.html">
-                  4 - Executando contêiner e imagem</a
+                  4 - Executando container e imagem</a
                 >
               </li>
               <li class="opcoes">
@@ -73,9 +73,11 @@
           <h2>
             Conceito e definição
           </h2>
-          <p >Um Dockerfile é um arquivo de texto que contém uma série de instruções que o Docker usa para construir automaticamente uma imagem Docker. Essas instruções incluem etapas como escolher a imagem base(obrigatoriamente), copiar arquivos para dentro da imagem, instalar dependências, configurar variáveis de ambiente e definir comandos a serem executados quando o contêiner for iniciado. 
+          <p >Um Dockerfile é um arquivo de texto que contém uma série de <strong>instruções</strong> que o Docker usa para construir automaticamente uma <strong>imagem Docker</strong>. 
+            Essas instruções incluem etapas como escolher a <strong>imagem base</strong>(obrigatoriamente), copiar arquivos para dentro da imagem,
+             instalar dependências, configurar variáveis de ambiente e definir comandos a serem executados quando o container for iniciado. 
 <br><br>
-            Em resumo, um Dockerfile é como um conjunto de instruções passo a passo que dizem ao Docker como construir uma imagem Docker específica. Ele permite que você defina e automatize todo o processo de criação de uma imagem, garantindo que o ambiente dentro do contêiner seja configurado corretamente para o seu aplicativo ou serviço. 
+            Em resumo, um Dockerfile é como um conjunto de instruções passo a passo que dizem ao Docker como construir uma imagem Docker específica. Ele permite que você defina e automatize todo o processo de criação de uma imagem, garantindo que o ambiente dentro do container seja configurado corretamente para o seu aplicativo ou serviço. 
             
             
           </p>
@@ -98,10 +100,10 @@
         
             <p>
                 <strong>FROM node </strong> 				- define a imagem base que será utilizada <br>
-                <strong>WORKDIR /usr/src/app</strong>	- cria o diretório dessa imagem no contêiner e entra, ou apenas entra se esse diretório já existir <br>
-                <strong>COPY package.json .</strong>		- copia o arquivo local (package.json) para a pasta do contêiner/app -*O . se refere ao diretório onde você está, como entramos no /app se refere a ele <br>
+                <strong>WORKDIR /usr/src/app</strong>	- cria o diretório dessa imagem no container e entra, ou apenas entra se esse diretório já existir <br>
+                <strong>COPY package.json .</strong>		- copia o arquivo local (package.json) para a pasta do container/app -*O . se refere ao diretório onde você está, como entramos no /app se refere a ele <br>
                 <strong>RUN npm i				</strong>- após copiar o arquivo roda o npm install <br>
-                <strong>COPY . .</strong>				- copia todos os arquivos da raiz do projeto (onde está o dockerfile) para o /app * o primeiro . se refere a pasta raiz do projeto localmente e o segundo . se refere a pasta do contêiner/app <br>
+                <strong>COPY . .</strong>				- copia todos os arquivos da raiz do projeto (onde está o dockerfile) para o /app * o primeiro . se refere a pasta raiz do projeto localmente e o segundo . se refere a pasta do container/app <br>
                 <strong>EXPOSE 3000	</strong>			- define a porta da aplicação <br>
                 <strong>CMD ["node","index.js"]</strong>	- o comando que dá o start na aplicação
                 </p>
@@ -112,11 +114,11 @@
             <strong>RUN</strong>: A instrução "RUN" é usada para executar comandos durante o processo de construção da imagem Docker. Quando você cria uma imagem Docker usando um Dockerfile, cada instrução "RUN" é executada em uma nova camada intermediária da imagem. Esses comandos são executados no ambiente de construção da imagem e podem ser usados para instalar pacotes, configurar o ambiente, baixar arquivos, entre outras tarefas. 
             <br>
 
-<strong>CMD</strong>: A instrução "CMD" é usada para definir o comando padrão a ser executado quando um contêiner baseado na imagem Docker é iniciado. Você só pod>e ter uma instrução "CMD" em um Dockerfile e ela substituirá qualquer instrução "CMD" anterior se houver. O comando definido pela instrução "CMD" pode ser substituído quando você inicia um contêiner, passando um novo comando como argumento. 
+<strong>CMD</strong>: A instrução "CMD" é usada para definir o comando padrão a ser executado quando um container baseado na imagem Docker é iniciado. Você só pod>e ter uma instrução "CMD" em um Dockerfile e ela substituirá qualquer instrução "CMD" anterior se houver. O comando definido pela instrução "CMD" pode ser substituído quando você inicia um container, passando um novo comando como argumento. 
 <br>
-<strong>ENTRYPOINT</strong>: configura o comando a ser executado quando o contêiner é iniciado, similar à funcionalidade do CMD. 
+<strong>ENTRYPOINT</strong>: configura o comando a ser executado quando o container é iniciado, similar à funcionalidade do CMD. 
 <br>
-Resumindo, "RUN" é usado durante a construção da imagem para executar comandos e modificar a camada intermediária da imagem, enquanto "CMD" é usado para definir o comando padrão a ser executado quando o contêiner é iniciado assim como o “ENTRYPOINT”. 
+Resumindo, "RUN" é usado durante a construção da imagem para executar comandos e modificar a camada intermediária da imagem, enquanto "CMD" é usado para definir o comando padrão a ser executado quando o container é iniciado assim como o “ENTRYPOINT”. 
 </p>
 
 <h2>Comandos</h2>

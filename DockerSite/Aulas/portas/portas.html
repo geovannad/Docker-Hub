@@ -26,7 +26,7 @@
               </li>
               <li class="opcoes">
                 <a href="../container/container.html">
-                  2 - Conceito de contêiner</a
+                  2 - Conceito de container</a
                 >
               </li>
               <li class="opcoes">
@@ -35,7 +35,7 @@
 
               <li class="opcoes">
                 <a href="../comandos/comandos.html">
-                  4 - Executando contêiner e imagem</a
+                  4 - Executando container e imagem</a
                 >
               </li>
               <li class="opcoes">
@@ -87,38 +87,38 @@
       <div class="container showcase-inner" style="color: #1d63ed">
         <h2>Conceito e definição</h2>
         <p>
-          Quando um contêiner Docker é criado, ele pode expor portas para que
-          serviços dentro do contêiner sejam acessíveis a partir do ambiente
-          externo. Isso é feito por meio do mapeamento de portas, onde uma porta
-          do host é vinculada a uma porta dentro do contêiner. Dessa forma, o
+          Quando um container Docker é criado, ele pode <strong>expor portas</strong> para que
+          serviços dentro do container sejam acessíveis a partir do ambiente
+          externo. Isso é feito por meio do <strong>mapeamento de portas</strong>, onde uma porta
+          do host é vinculada a uma porta dentro do container. Dessa forma, o
           tráfego direcionado para a porta do host é redirecionado para a porta
-          especificada dentro do contêiner.
+          especificada dentro do container.
         </p>
 
         <h2>Exemplo</h2>
         <p>
           Imagine que você está construindo uma casa e precisa conectar os fios
           elétricos da casa à rede elétrica da rua. Para isso, você instala uma
-          caixa de distribuição elétrica na casa (o contêiner Docker) e conecta
-          os fios da caixa à rede elétrica (o ambiente externo). A porta da
-          caixa de distribuição (a porta exposta pelo contêiner) é como uma
+          caixa de distribuição elétrica na casa (o container Docker) e conecta
+          os fios da caixa à rede elétrica (o ambiente externo). <strong>A porta da
+          caixa de distribuição</strong> (a porta exposta pelo container) é como uma
           interface que permite que a eletricidade flua da rede elétrica para
           dentro da casa.
         </p>
         <p>
-          Ao especificar o mapeamento de portas durante a criação do contêiner,
+          Ao especificar o mapeamento de portas durante a criação do container,
           você está essencialmente dizendo ao Docker para configurar uma conexão
           entre uma porta específica do host (a porta da rua) e uma porta
-          específica dentro do contêiner (a porta da caixa de distribuição). Por
+          específica dentro do container (a porta da caixa de distribuição). Por
           exemplo, ao executar o comando docker run -d -p 80:8080 httpd, você
           está dizendo ao Docker para redirecionar o tráfego da porta 80 do host
-          para a porta 8080 dentro do contêiner, permitindo que o serviço HTTP
+          para a porta 8080 dentro do container, permitindo que o serviço HTTP
           do Apache seja acessado a partir do navegador da web ao acessar a
           porta 80 do host.
         </p>
         <p>
           Assim, as portas no Docker desempenham um papel fundamental na
-          garantia da acessibilidade e interoperabilidade dos contêineres,
+          garantia da acessibilidade e interoperabilidade dos containeres,
           permitindo que eles se comuniquem com outros serviços e aplicativos no
           ambiente em que estão sendo executados.
         </p>
