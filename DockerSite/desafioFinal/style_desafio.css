@@ -141,6 +141,7 @@
     background-color: var(--overlay-color);
     height: 2px;
     width: 100%;
+    
   }
 
   #gabarito{
@@ -152,3 +153,4 @@
     border-radius: 5px 5px;
     color: #1D63ED;
   }
+  
