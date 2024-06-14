@@ -6,6 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="style_desafio.css">
     <link rel="stylesheet" href="../Css/style.css">
+    <style>
+      ol{
+        padding: 10px;
+        margin-left: 30px;
+      }
+      li{
+        color: black
+      }
+    </style>
 </head>
 <body>
     <div class="menu-wrap">
@@ -58,7 +67,40 @@
       <header class="showcase">
           <div class="container showcase-inner" style="color:#1D63ED;">
             
-            <p >Lorem ipsum bibendum id ornare feugiat diam gravida convallis nam curae iaculis lobortis, curabitur ac vitae pharetra metus sapien convallis ut dictum quam pretium, magna cubilia himenaeos cubilia et a senectus etiam augue ligula ullamcorper. venenatis. Lorem ipsum bibendum id ornare feugiat diam gravida convallis nam curae iaculis lobortis, curabitur ac vitae pharetra metus sapien convallis ut dictum quam pretium, magna cubilia himenaeos cubilia et a senectus etiam augue ligula ullamcorper. venenatis </p>
+            <p>
+              Agora, que você já tem conhecimento o bastante de Docker vamos fazer uma atividade final, essa atividade é um exemplo do mundo real com uma empresa real:
+              <br>
+ 
+A SWIFT está avaliando a necessidade de construção de um novo portal institucional para apresentação e consolidação da marca junto aos clientes e ao mercado de proteínas.
+Porém é necessário construir um ambiente de homologação (também conhecido como ambiente de validação), para que as alterações realizadas pela equipe de TI e Designer esteja disponível neste novo ambiente sem interferir com o processo que existe atualmente.
+<br>
+<br>
+Pense nisso, você faz parte da equipe que deverá atender essa nova demande de atividade formando um SQUAD Ágil com diversos perfis e conhecimentos em TI. Deste modo, é necessário prover um ambiente em CONTAINER conforme imagem abaixo:
+Para desenvolvimento desta atividade, é necessário atender as seguintes demandas:
+<br><br>
+<strong>Database Server</strong>
+</p>
+<ol>
+  <li>O banco de dados deve utilizar a última versão disponível do POSTGRESQL:latest - É necessário possibilitar o acesso ao banco de dados através da rede utilizando a porta 5454</li>
+  <li>Você deve definir a senha de acesso formada por seu &ltnome_idade&gt</li>
+  <li>Você deve carregar os scripts no banco dados disponíveis no arquivo 06a - Lab DockerCompose_Atividade.zip</li>
+</ol>
+<strong>Web Server</strong>
+<ol start="4">
+  <li>O servidor web utilizado pelo banco original é o NODE.JS na versão 14 ou superior.</li>
+  <li>Você deve carregar uma aplicação temporária disponível no arquivo 06d - LabDockerComposeAtividade_Node.zip para a pasta do container / &ltseunome-app&gt</li>
+<li>O servidor web em NODE.JS deverá possibilitar acesso do host através da porta 8080</li>
+</ol>
+<strong>Projeto Swift</strong>
+<ol start="7">
+  <li>Utilizar o arquivo 06d – LabDockerComposeAtividade_swift.zip para carregar no Web Server definido no item anterior</li>
+<li>Deverá ser configurado um VOLUME que permita compartilhar a pasta no container com o notebook local, de modo que uma alteração no arquivo HTML já reflita automaticamente no container sem a necessidade de reconstrução da imagem ou do container</li>
+</ol>
+<p><strong>Regras para construção da arquitetura da ATIVIDADE FINAL, você deve ter as seguintes informações:</strong></p>
+<ol>
+  <li>No mínimo um arquivo DOCKERFILE</li>
+  <li>Um arquivo DOCKER-COMPOSE</li>
+</ol>
 
             <p id="gabarito">Gabarito</p>
         </header>
