@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Desafio Final</title>
     <link rel="stylesheet" href="style_desafio.css">
     <link rel="stylesheet" href="../Css/style.css">
     <style>
@@ -23,37 +23,46 @@
         <div class="menu">
           <div>
             <div>
-              <ul>
-                
+              <ul>            
               
-              <li class="grupos" style="font-size: 2rem">Aulas:</li>
-              <li class="opcoes">
-                <a href="../../Aulas/docker/docker.html"> 1 - Conceito de Docker</a>
-              </li>
-              <li class="opcoes">
-                <a href="../../Aulas/container/container.html"> 2 - Conceito de container ?</a>
-              </li>
-              <li class="opcoes">
-                <a href="../../Aulas/imagem/imagem.html">
-                  3 - Conceito de imagem ?</a
-                >
-              </li>
-              <li class="opcoes"><a href="../"></a></li>
-              <li class="opcoes">
-                <a href="../../Aulas/portas/portas.html"> 4 - Funcionamento das Portas no Docker</a>
-              </li>
-              <li class="opcoes"><a href="../../Aulas/docker hub/hub.html"> 5 - Conceito de Docker Hub</a></li>
-              <li class="opcoes">
-                <a href="../../Aulas.dockerFIle/fileDocker.html"> 6 - Conceito de Docker File</a>
-              </li>
-              <li class="opcoes">
-                <a href="../../Aulas/docker compose/compose.html"> 7 - Conceito de Docker Compose</a>
-              </li>
-              <li class="grupos" style="font-size: 2rem">Exercícios:</li>
-              <li class="opcoes">
-                <a href="../telaInicial/escolha.html">Atividades</a>
-              </li>
-              <li class="opcoes"><a href="../desafioFinal/desafioFinal.html">Desafio Final</a></li>
+                <li class="grupos" style="font-size: 2rem">Aulas:</li>
+                <li class="opcoes">
+                  <a href="../Aulas/docker/docker.html"> 1 - Conceito de Docker</a>
+                </li>
+                <li class="opcoes">
+                  <a href="../Aulas/container/container.html"> 2 - Conceito de container</a>
+                </li>
+                <li class="opcoes">
+                  <a href="../Aulas/imagem/imagem.html">
+                    3 - Conceito de imagem</a
+                  >
+                </li>
+
+                <li class="opcoes">
+                  <a href="../Aulas/portas/portas.html"> 4 - Funcionamento das Portas no Docker</a>
+                </li>
+                <li class="opcoes">
+                  <a href="../Aulas/comandos/comandos.html">
+                    5 - Executando container e imagem</a
+                  >
+                </li>
+                <li class="opcoes"><a href="../Aulas/docker hub/hub.html"> 6 - Conceito de Docker Hub</a></li>
+                <li class="opcoes">
+                  <a href="../Aulas/dockerFIle/fileDocker.html"> 7 - Conceito de Docker File</a>
+                </li>
+                <li class="opcoes">
+                  <a href="../Aulas/docker compose/compose.html"> 8 - Conceito de Docker Compose</a>
+                </li>
+                <li class="opcoes">
+                  <a href="../Aulas/revisao/revisao.html">
+                    9 - Revisão de comandos</a
+                  >
+                </li>
+                <li class="grupos" style="font-size: 2rem">Exercícios:</li>
+                <li class="opcoes">
+                  <a href="../Atividades/telaInicial/escolha.css">Atividades</a>
+                </li>
+                <li class="opcoes"><a href="./desafioFinal.html">Desafio Final</a></li>
               </ul>
             </div>
           </div>
@@ -61,7 +70,7 @@
       </div>
       
     <div class="logo-div" >
-      <a class="logo-docker" href="#"><img src="../..//Assets/docker-logo.png" alt="logo docker"></a>
+      <a class="logo-docker" href="#"><img src="../Assets/docker-logo.png" alt="logo docker"></a>
   </div>
       <h1>Desafio Final</h1>
       <header class="showcase">
@@ -71,38 +80,41 @@
               Agora, que você já tem conhecimento o bastante de Docker vamos fazer uma atividade final, essa atividade é um exemplo do mundo real com uma empresa real:
               <br>
  
-A SWIFT está avaliando a necessidade de construção de um novo portal institucional para apresentação e consolidação da marca junto aos clientes e ao mercado de proteínas.
-Porém é necessário construir um ambiente de homologação (também conhecido como ambiente de validação), para que as alterações realizadas pela equipe de TI e Designer esteja disponível neste novo ambiente sem interferir com o processo que existe atualmente.
-<br>
-<br>
-Pense nisso, você faz parte da equipe que deverá atender essa nova demande de atividade formando um SQUAD Ágil com diversos perfis e conhecimentos em TI. Deste modo, é necessário prover um ambiente em CONTAINER conforme imagem abaixo:
-Para desenvolvimento desta atividade, é necessário atender as seguintes demandas:
-<br><br>
-<strong>Database Server</strong>
-</p>
-<ol>
-  <li>O banco de dados deve utilizar a última versão disponível do POSTGRESQL:latest - É necessário possibilitar o acesso ao banco de dados através da rede utilizando a porta 5454</li>
-  <li>Você deve definir a senha de acesso formada por seu &ltnome_idade&gt</li>
-  <li>Você deve carregar os scripts no banco dados disponíveis no arquivo 06a - Lab DockerCompose_Atividade.zip</li>
-</ol>
-<strong>Web Server</strong>
-<ol start="4">
-  <li>O servidor web utilizado pelo banco original é o NODE.JS na versão 14 ou superior.</li>
-  <li>Você deve carregar uma aplicação temporária disponível no arquivo 06d - LabDockerComposeAtividade_Node.zip para a pasta do container / &ltseunome-app&gt</li>
-<li>O servidor web em NODE.JS deverá possibilitar acesso do host através da porta 8080</li>
-</ol>
-<strong>Projeto Swift</strong>
-<ol start="7">
-  <li>Utilizar o arquivo 06d – LabDockerComposeAtividade_swift.zip para carregar no Web Server definido no item anterior</li>
-<li>Deverá ser configurado um VOLUME que permita compartilhar a pasta no container com o notebook local, de modo que uma alteração no arquivo HTML já reflita automaticamente no container sem a necessidade de reconstrução da imagem ou do container</li>
-</ol>
-<p><strong>Regras para construção da arquitetura da ATIVIDADE FINAL, você deve ter as seguintes informações:</strong></p>
-<ol>
-  <li>No mínimo um arquivo DOCKERFILE</li>
-  <li>Um arquivo DOCKER-COMPOSE</li>
-</ol>
-
-            <p id="gabarito">Gabarito</p>
-        </header>
+            A SWIFT está avaliando a necessidade de construção de um novo portal institucional para apresentação e consolidação da marca junto aos clientes e ao mercado de proteínas.
+            Porém é necessário construir um ambiente de homologação (também conhecido como ambiente de validação), para que as alterações realizadas pela equipe de TI e Designer esteja disponível neste novo ambiente sem interferir com o processo que existe atualmente.
+            <br>
+            <br>
+            Pense nisso, você faz parte da equipe que deverá atender essa nova demande de atividade formando um SQUAD Ágil com diversos perfis e conhecimentos em TI. Deste modo, é necessário prover um ambiente em CONTAINER conforme imagem abaixo:
+            Para desenvolvimento desta atividade, é necessário atender as seguintes demandas:
+            <br><br>
+            <strong>Database Server</strong>
+            </p>
+            <ol>
+              <li>O banco de dados deve utilizar a última versão disponível do POSTGRESQL:latest - É necessário possibilitar o acesso ao banco de dados através da rede utilizando a porta 5454</li>
+              <li>Você deve definir a senha de acesso formada por seu &ltnome_idade&gt</li>
+              <li>Você deve carregar os scripts no banco dados disponíveis no arquivo 06a - Lab DockerCompose_Atividade.zip</li>
+            </ol>
+            <strong>Web Server</strong>
+            <ol start="4">
+              <li>O servidor web utilizado pelo banco original é o NODE.JS na versão 14 ou superior.</li>
+              <li>Você deve carregar uma aplicação temporária disponível no arquivo 06d - LabDockerComposeAtividade_Node.zip para a pasta do container / &ltseunome-app&gt</li>
+            <li>O servidor web em NODE.JS deverá possibilitar acesso do host através da porta 8080</li>
+            </ol>
+            <strong>Projeto Swift</strong>
+            <ol start="7">
+              <li>Utilizar o arquivo 06d – LabDockerComposeAtividade_swift.zip para carregar no Web Server definido no item anterior</li>
+            <li>Deverá ser configurado um VOLUME que permita compartilhar a pasta no container com o notebook local, de modo que uma alteração no arquivo HTML já reflita automaticamente no container sem a necessidade de reconstrução da imagem ou do container</li>
+            </ol>
+            <p><strong>Regras para construção da arquitetura da ATIVIDADE FINAL, você deve ter as seguintes informações:</strong></p>
+            <ol>
+              <li>No mínimo um arquivo DOCKERFILE</li>
+              <li>Um arquivo DOCKER-COMPOSE</li>
+            </ol>
+            <div class="div-botoes">
+              <a href="../download/Arquivos.zip" class="btn1 " id="proximo" download>Baixar Arquivos</a>
+              <a href="../download/gabarito.zip" download class="btn1" id="finalizar">Gabarito</a>
+              
+          </div>
+    </header>
 </body>
 </html>

@@ -156,6 +156,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     });
                 }
+                    resultado = document.getElementsByClassName('resultado')[0]
+                    const img = document.createElement('img');
+                    img.src = '../../Assets/respostaD.jpg';
+                    img.classList.add('imagem');
+                    resultado.appendChild(img);
                     botaoFinalizar.classList.add('block');
                     const comandosB = document.querySelectorAll('.comandos .cod-elem');
                     comandosB.forEach(comandoB => {

@@ -143,14 +143,3 @@
     width: 100%;
     
   }
-
-  #gabarito{
-    margin-top: 2%;
-    background-color: rgb(210, 203, 203);
-    text-align: center;
-    padding: 10px 10px;
-    width: 12%;
-    border-radius: 5px 5px;
-    color: #1D63ED;
-  }
-  

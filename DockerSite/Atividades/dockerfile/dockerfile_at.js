@@ -31,7 +31,7 @@ function getNewPosition(column, posY) {
   return result;
 }
 
-// verificação das repostas 
+// verificação das repostas
 
 ("use strict");
 
@@ -42,7 +42,6 @@ const gabarito = ["d", "c", "a", "c", "b", "d"];
 //variavel para verificar se o desafio foi finalizado
 let finalizado = false;
 
-
 //exercicio 8 de drag
 const gabaritoDrag8 = ["1", "2", "2", "2", "3", "4"];
 let respostaDrag8 = [];
@@ -50,35 +49,35 @@ let respostaDrag8 = [];
 const gabaritoDrag7 = ["1", "2", "2", "3"];
 let respostaDrag7 = [];
 
-if ( localStorage.getItem('respostasD') != null) {
-const resposta = JSON.parse(localStorage.getItem('respostasD'));
-let storage = false
-if (resposta != null) {
-for (let i = 0; i < gabarito.length; i++) {
-    if (resposta[i]!=null){
-        storage=true
-    }
-    if (storage) {  
-        break
-    }
-}
-     
-if (storage) {
+if (localStorage.getItem("respostasD") != null) {
+  const resposta = JSON.parse(localStorage.getItem("respostasD"));
+  let storage = false;
+  if (resposta != null) {
     for (let i = 0; i < gabarito.length; i++) {
-        if(resposta[i]!=''){
-            console.log("entrou!")
-            const questaoResposta = document.querySelector(`#resposta${i + 1}${resposta[i]}`);
-                if (questaoResposta) {
-                    questaoResposta.classList.add('selecionado');
-                }
-        }
-        
+      if (resposta[i] != null) {
+        storage = true;
+      }
+      if (storage) {
+        break;
+      }
     }
+
+    if (storage) {
+      for (let i = 0; i < gabarito.length; i++) {
+        if (resposta[i] != "") {
+          console.log("entrou!");
+          const questaoResposta = document.querySelector(
+            `#resposta${i + 1}${resposta[i]}`
+          );
+          if (questaoResposta) {
+            questaoResposta.classList.add("selecionado");
+          }
+        }
+      }
+    }
+  }
+  respostas = resposta;
 }
-}
-respostas = resposta
-}
- 
 
 //pegando os elementos do ondrag
 
@@ -122,15 +121,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-   //botão de proxima atividade
-   const botaoProximo = document.getElementById('proximo');
+  //botão de proxima atividade
+  const botaoProximo = document.getElementById("proximo");
 
-   //adiciona um evento de clique no botão
-   botaoProximo.addEventListener('click', () => {
-      if(!finalizado) {
-       localStorage.setItem('respostasD', JSON.stringify(respostas));
-      }
-   });
+  //adiciona um evento de clique no botão
+  botaoProximo.addEventListener("click", () => {
+    if (!finalizado) {
+      localStorage.setItem("respostasD", JSON.stringify(respostas));
+    }
+  });
 
   //botão de finalizar
   const botaoFinalizar = document.getElementById("finalizar");
@@ -153,16 +152,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     //alerta se alguma questão não foi respondida
-    if (
-      temVazio == true ||
-      qtdChild8 < 6 ||
-      qtdChild7 < 4
-    ) {
+    if (temVazio == true || qtdChild8 < 6 || qtdChild7 < 4) {
       alert("Por favor, responda todas as questões.");
     } else {
       //finaliza o desafio
       finalizado = true;
-      localStorage.setItem('respostasD', JSON.stringify(''));
+      localStorage.setItem("respostasD", JSON.stringify(""));
 
       for (let i = 0; i < qtdChild8; i++) {
         respostaDrag8.push(elementoFinal8[0].children[i].id);
@@ -219,21 +214,26 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       }
+      resultado8 = document.getElementsByClassName("resultado8")[0];
+      const img8 = document.createElement("img");
+      img8.src = "../../Assets/resposta8.jpg";
+      img8.classList.add("imagem");
+      resultado8.appendChild(img8);
+      resultado7 = document.getElementsByClassName("resultado7")[0];
+      const img = document.createElement("img");
+      img.src = "../../Assets/resposta7.jpg";
+      img.classList.add("imagem");
+      resultado7.appendChild(img);
       botaoFinalizar.classList.add("block");
       const comandosB = document.querySelectorAll(".comandos .cod-elem ");
       comandosB.forEach((comandoB) => {
         comandoB.classList.remove("selecionar");
         comandoB.classList.add("block");
-
+      });
+      const comandoDrag = document.getElementsByClassName("cod");
+      for (let i = 0; i < comandoDrag.length; i++) {
+        comandoDrag[i].draggable = false;
       }
-      
-
-    );
-    const comandoDrag = document.getElementsByClassName("cod");
-    for (let i = 0; i < comandoDrag.length; i++) {
-      comandoDrag[i].draggable = false;
-      
-    }
     }
   });
 });
