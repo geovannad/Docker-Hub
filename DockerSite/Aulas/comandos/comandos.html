@@ -70,13 +70,8 @@
     <h1>Comandos Básicos do Docker </h1>
     <div class="showcase">
         <div class=" showcase-inner">
+
 <!-- conteudo 1 -->
-          <h2>Criar e Executar um container </h2>
-          <p>O comando principal para criar e executar containeres é o <strong>docker run.</strong></p>
-          <p>Para criar um container a partir da imagem do Ubuntu, use: </p>
-          <code class="cod-elem">docker run --name meuConteiner ubuntu </code>
-          <p>Aqui, estamos criando um container chamado "meuConteiner" a partir da imagem do Ubuntu. Se você não tem essa imagem baixada, o Docker irá baixá-la automaticamente antes de criar o container. </p>
-<!-- conteudo 2 -->
           <h2>Baixar Imagens Docker  </h2>
           <p>Se você quiser baixar uma imagem sem criar um container, use o comando <strong>docker pull.</strong><p>
           <p>Por exemplo, para baixar a imagem do Ubuntu: </p>
@@ -85,24 +80,79 @@
           <code class="cod-elem">docker pull ubuntu:3.0 </code>
           <p>ou caso queira pegar a ultima versão</p>
           <code class="cod-elem">docker pull ubuntu:latest </code>
+          <div class="representacao">
+            <div id="host" class="caixas">
+              <p>Docker Host</p>
+              <div class="linha">
+              </div>
+            <img class="imagem" src="../../Assets/imagem-ubuntu-hub.png" alt="imagem do ubuntu">
+            </div>
+            <div id="hub" class="caixas">
+                <p>Docker Hub</p>
+                <div class="linha"></div>
+                  <img class="imagem" src="../../Assets/imagem-ubuntu-hub.png" alt="imagem do ubuntu">
+            </div>
+          </div>
+
+<!-- conteudo 2 -->
+          <h2>Criar e Executar um container </h2>
+          <p>O comando principal para criar e executar containeres é o <strong>docker run.</strong></p>
+          <p>Para criar um container a partir da imagem do Ubuntu, use: </p>
+          <code class="cod-elem">docker run --name meuConteiner ubuntu </code>
+          <p>Aqui, estamos criando um container chamado "meuConteiner" a partir da imagem do Ubuntu. Se você não tem essa imagem baixada, o Docker irá baixá-la automaticamente antes de criar o container. </p>
+
+          <div class="representacao">
+            <div id="host" class="caixas">
+              <p>Docker Host</p>
+            <div class="linha"></div>
+                <img class="imagem" src="../../Assets/imagem-ubuntu-hub.png" alt="imagem do ubuntu">
+                <img class="imagem" src="../../Assets/conteiner-ligado.png" alt="conteiner ligado">
+            </div>
+            <div id="hub" class="caixas">
+                <p>Docker Hub</p>
+              <div class="linha"></div>
+                  <img class="imagem" src="../../Assets/imagem-ubuntu-hub.png" alt="imagem do ubuntu">
+            </div>
+          </div>
+
 <!-- conteudo 3 -->
+
           <h2>Verificar containeres em Execução </h2>
           <p>Para verificar se o container foi criado e está rodando, use:  </p>
           <code class="cod-elem">docker ps </code>
           <p>Este comando mostra todos os containeres que estão rodando. Para ver todos os containeres, incluindo os que estão parados, use:  </p>
           <code class="cod-elem">docker ps -a </code>
+
 <!-- conteudo 4 -->
+
           <h2>Acessar o Terminal do container </h2>
           <p>Para acessar o terminal do container "meuConteiner", use o comando <strong>docker exec</strong> com as flags <strong>-it</strong> e <strong>bash:</strong> </p>
           <code class="cod-elem">docker exec -it meuConteiner bash </code>
           <p>Agora você está no terminal do seu container e pode interagir com ele como se estivesse em um sistema Ubuntu normal. </p>
+
 <!-- conteudo 5 -->
+
           <h2>Parar um container </h2>
           <p>Para parar um container em execução, use:</p>
           <code class="cod-elem">docker stop meuConteiner </code>
           <p>Depois de parar, se você digitar <strong>docker ps</strong>, verá que o "meuConteiner" não está mais listado, pois este comando mostra apenas os containeres em execução. </p>    
+
+          <div class="representacao">
+            <div id="host" class="caixas">
+              <p>Docker Host</p>
+            <div class="linha"></div>
+                <img class="imagem" src="../../Assets/imagem-ubuntu-hub.png" alt="imagem do ubuntu">
+                <img class="imagem" src="../../Assets/conteiner-parado.png" alt="conteiner ligado">
+            </div>
+            <div id="hub" class="caixas">
+                <p>Docker Hub</p>
+              <div class="linha"></div>
+                  <img class="imagem" src="../../Assets/imagem-ubuntu-hub.png" alt="imagem do ubuntu">
+            </div>
+          </div>
           
 <!-- conteudo 6 -->
+
           <h2>Excluindo containeres e Imagens </h2>
           <p>Depois de aprender como criar e parar containeres, vamos ver como removê-los quando não precisamos mais deles. </p>
           <h3>Removendo containeres </h2>
@@ -114,6 +164,20 @@
           <p>Se você quiser remover todos os containeres parados de uma vez, use o comando: </p>
           <code class="cod-elem">docker container prune </code>
           <p>Este comando irá perguntar se você realmente quer remover todos os containeres parados. Digite "y" e pressione Enter para confirmar. </p>
+
+          <div class="representacao">
+            <div id="host" class="caixas">
+              <p>Docker Host</p>
+            <div class="linha"></div>
+                <img class="imagem" src="../../Assets/imagem-ubuntu-hub.png" alt="imagem do ubuntu">
+            </div>
+            <div id="hub" class="caixas">
+                <p>Docker Hub</p>
+              <div class="linha"></div>
+                  <img class="imagem" src="../../Assets/imagem-ubuntu-hub.png" alt="imagem do ubuntu">
+            </div>
+          </div>
+
           <h3>Removendo Imagens </h3>
           <p>Imagens Docker ocupam espaço no disco, então é importante remover aquelas que não são mais necessárias. Para remover uma imagem, usamos o comando <strong></strong>docker rmi</strong>. </p>
           <p>Primeiro, liste todas as imagens para encontrar o ID ou o nome da imagem que deseja remover: </p>
@@ -124,6 +188,18 @@
           <code class="cod-elem">docker image prune </code>
           <p>E para uma limpeza mais agressiva, que remove todas as imagens, containeres parados, volumes não usados e redes, use: </p>
           <code class="cod-elem">docker system prune </code>
+
+          <div class="representacao">
+            <div id="host" class="caixas">
+              <p>Docker Host</p>
+            <div class="linha"></div>
+            </div>
+            <div id="hub" class="caixas">
+                <p>Docker Hub</p>
+              <div class="linha"></div>
+                  <img class="imagem" src="../../Assets/imagem-ubuntu-hub.png" alt="imagem do ubuntu">
+            </div>
+          </div>
 
 <!-- conteudo 7 -->
           <h2>Criando containeres com Portas </h2>

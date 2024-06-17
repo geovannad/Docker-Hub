@@ -26,29 +26,14 @@
     background-repeat: no-repeat; 
     background-position: center center;
     background-position-y: 100%;
-    
   }
-  .container {
-    
+
+.container {    
     overflow: hidden;
     padding: 0 5.3rem;
     margin: 0 auto;
-    
   }
-  .showcase {
-    height: 100%;
-    margin-top: 40px;
-    
-  }
-  
-  .showcase .showcase-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    
-  }
-  
+ 
   h1{
     font-weight: 100;
     text-align: center;
@@ -60,18 +45,6 @@
     font-weight: 300;
   }
   
-  p{
-    color: black;
-    font-size: 1.1rem;
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  .comandos code{
-    width: 600px;
-    display: block;
-    
-  }
   #title-docker{
     position: absolute;
     margin-left: 23%;
@@ -79,25 +52,7 @@
     font-size: 25px;
     font-style:unset;
   }
-  
-  .cod-elem{
-    color: var(--primary-color);
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    
-    padding: 15px;
-    width: 20%;
-    text-align: center;
-    border-radius: 0.8rem;
-    margin: 10px;
-    margin-top: 3%;
-    
-  }
-  
-  .comandos{
-    display: flex;
-    padding: 10px 0 0 0;
-  }
+
   
   .resultados{
     display: flex;
@@ -120,10 +75,6 @@
     margin-left: 55%;
   }
 
-  #comando{
-    height: 240px;
-  }
-
   .column {
     display: flex;
     flex-direction: column;
@@ -143,18 +94,20 @@
     background-color: white;
     padding: 10px;
     border-radius: 5px;
-    width: 20rem;
+    width: 27rem;
     color: var(--primary-color);
     background-color: #D9D9D9;
+    font-size: 1.2rem;
   }
+
   #host{
     height: 410px;
   }
 
-
   .dragging {
     opacity: 0.5;
   }
+
   #hub{
     height: 240px;
   }
@@ -183,9 +136,6 @@
     width: 100%;
   }
 
-
-
-  
 .certo{
   background-color: rgba(0, 183, 18, 0.233);
   border: 2px solid rgb(0, 183, 18)

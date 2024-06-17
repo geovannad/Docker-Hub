@@ -26,15 +26,12 @@ body {
   background-repeat: no-repeat; 
   background-position: center center;
   background-position-y: 100%;
-  
 }
 
 .showcase {
   height: 100%;
   margin-top: 40px;
   padding: 0 5.3rem;
-
-  
 }
 
 .showcase-inner {
@@ -42,8 +39,8 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  
 }
+
 
 h1{
   font-weight: 100;
@@ -57,25 +54,22 @@ h2{
   color:#1D63ED;
   margin-bottom: 20px;
 }
+
 h3{
   color:var(--overlay-color);
   font-weight: 600;
   margin-bottom: 20px;
   font-size: 20px;
   margin-top:20px;
-
 }
-p{
-  
+
+p{  
   color: black;
   font-size: 1.2rem;
   width: 100%;
   max-width: 100%;
   margin-bottom: 20px;
 }
-
-
-
 
 .cod-elem{
   color: var(--primary-color);
@@ -86,4 +80,55 @@ p{
   border-radius: 0.8rem;
   width: 500px;
   margin-bottom: 20px;
+}
+
+
+#host {
+  min-height: 100px;
+  text-wrap: wrap;
+}
+
+#hub {
+  min-height: 100px;
+  text-wrap: wrap;}
+
+.container {
+  overflow: hidden;
+  padding: 0 5.3rem;
+  margin: 0 auto;
+}
+
+.comandos {
+  display: flex;
+  padding: 10px 0 0 0;
+  flex-wrap: wrap;
+}
+
+.representacao {
+  display: flex;
+  margin-top: 15px auto;
+  width: 1000px;
+  height: 100%;
+  max-width: 100%;
+  align-items: start;
+}
+
+.linha {
+  background-color: var(--overlay-color);
+  height: 2px;
+  width: 100%;
+}
+
+.caixas {
+  width: 300px;
+  border: solid var(--overlay-color);
+  margin: 25px 10px;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.imagem{
+  height: 90px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
