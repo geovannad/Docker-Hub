@@ -159,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resultado = document.getElementsByClassName('resultado')[0]
                     const img = document.createElement('img');
                     img.src = '../../Assets/respostaD.jpg';
+                    img.draggable = false
                     img.classList.add('imagem');
                     resultado.appendChild(img);
                     botaoFinalizar.classList.add('block');

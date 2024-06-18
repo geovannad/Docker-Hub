@@ -217,11 +217,13 @@ document.addEventListener("DOMContentLoaded", () => {
       resultado8 = document.getElementsByClassName("resultado8")[0];
       const img8 = document.createElement("img");
       img8.src = "../../Assets/resposta8.jpg";
+      img8.draggable = false
       img8.classList.add("imagem");
       resultado8.appendChild(img8);
       resultado7 = document.getElementsByClassName("resultado7")[0];
       const img = document.createElement("img");
       img.src = "../../Assets/resposta7.jpg";
+      img.draggable = false
       img.classList.add("imagem");
       resultado7.appendChild(img);
       botaoFinalizar.classList.add("block");
