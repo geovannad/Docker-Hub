@@ -140,6 +140,7 @@ body {
   margin: 10px;
   box-sizing: border-box;
   text-align: center;
+  z-index: 1000;
 }
 h1 {
   font-weight: 100;
