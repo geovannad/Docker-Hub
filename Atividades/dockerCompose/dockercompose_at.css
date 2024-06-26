@@ -86,7 +86,7 @@
     border-radius: 1rem;
     min-width: 30%;
     height: auto;
-    min-height: 1000px;
+    min-height: 1100px;
     align-items: center;
   }
 
@@ -94,7 +94,7 @@
     background-color: white;
     padding: 10px;
     border-radius: 5px;
-    width: 27rem;
+    width: 100%;
     color: var(--primary-color);
     background-color: #D9D9D9;
     font-size: 1.2rem;

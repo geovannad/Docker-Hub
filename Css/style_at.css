@@ -40,7 +40,6 @@ body {
 .showcase {
   height: 100%;
   margin-top: 10px;
-  display: flex;
   align-items: center;
   margin-left: 70px;
 }

@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 //finaliza o desafio
                 finalizado = true;
-                localStorage.setItem('respostasI', JSON.stringify(''));
+                localStorage.clear()
                 //verifica se o gabarito é o mesmo que as respostas
                 for (let i = 0; i < respostas.length; i++) {
 

@@ -3,7 +3,7 @@
 //array onde guardaremos as respostas selecionadas
 let respostas = ['','','','','','','','','','',''];
 //array do gabarito
-const gabarito = ['c', 'a','b','c','b','b','b','a','a','c','c'];
+const gabarito = ['c', 'b','b','c','b','b','b','a','a','c','c'];
 //variavel para verificar se o desafio foi finalizado
 let finalizado = false;
 if ( localStorage.getItem('respostasC') != null) {
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 //finaliza o desafio
                 finalizado = true;
-                localStorage.setItem('respostasC', JSON.stringify(''));
+                localStorage.clear();
  
                 //verifica se o gabarito é o mesmo que as respostas
                 for (let i = 0; i < respostas.length; i++) {
