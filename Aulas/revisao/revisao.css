@@ -70,6 +70,7 @@ p {
   padding: 15px;
   border-radius: 0.8rem;
   margin: 10px;
+  cursor: pointer;
 }
 
 .comandos {

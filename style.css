@@ -94,7 +94,7 @@ footer {
 }
 footer div {
   background-color:  var(--primary-color);
-  margin: -5px 0px 0px 0px;
+  margin: -10px -20px -30px -20px;
   padding: 0px;
   color: #fff;
   text-align: center;
@@ -139,6 +139,7 @@ svg {
 }
 .gooeff {
   filter: url(#goo);
+
 }
 #wave2 {
   animation-duration: 5s;
@@ -177,4 +178,9 @@ svg {
   to {
     transform: translateY(20%);
   }
+}
+
+#a{
+  background-color: #1D63ED;
+  width: 100%;
 }

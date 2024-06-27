@@ -144,7 +144,7 @@ body {
   margin: 10px;
   box-sizing: border-box;
   text-align: center;
-  z-index: 100;
+  z-index: 100 ;
 }
 h1 {
   font-weight: 100;
@@ -272,3 +272,8 @@ svg {
     transform: translateY(20%);
   }
 }
+#a{
+  background-color: #1D63ED;
+  width: 100%;
+}
+
