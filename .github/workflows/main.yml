@@ -16,6 +16,5 @@ jobs:
         run: |
            echo "${{secrets.KEY}}" > webserver.pem && chmod 600 webserver.pem
            ssh -o StrictHostKeyChecking=no -i "webserver.pem" ubuntu@ec2-98-82-253-150.compute-1.amazonaws.com "
-               sudo cd /var/www/html/Docker-Hub &&
-               sudo git pull
+               cd /var/www/html/Docker-Hub && sudo git pull
            "
