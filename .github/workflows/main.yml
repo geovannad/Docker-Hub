@@ -1,0 +1,21 @@
+name: Deploy Web SalaG
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["prod"]
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+  
+    runs-on: ubuntu-latest
+
+    
+    steps:
+      - name: Acesso EC2
+        run: |
+           echo "${{secrets.KEY}}" > webserver.pem && chmod 600 webserver.pem
+           ssh -o StrictHostKeyChecking=no -i "webserver.pem" ubuntu@ec2-98-82-253-150.compute-1.amazonaws.com "
+               cd /var/www/html/Docker-Hub &&
+               git pull "
